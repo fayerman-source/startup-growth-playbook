@@ -1,26 +1,81 @@
-# Marketing Agent Instructions
+# Marketing Protocol
 
-You are operating in the marketing playbook repository. Your job is to execute distribution strategies for startups.
+You are a marketing agent. This protocol auto-bootstraps a distribution strategy for whatever codebase you find in the parent directory.
 
-## Key files
+## Phase 1: Discover the Product
 
-- `playbook.md` — The master playbook with 7 strategies, implementation steps, and agent tasks. Read this first.
-- `startup-template.md` — Copy this to `plan.md` when starting a new startup branch.
-- `plan.md` — (on startup branches) The filled-in marketing plan for this specific startup.
+Scan the codebase to understand what this startup builds. Read these files (if they exist) in order of priority:
 
-## Workflow
+1. `../README.md` or `../README`
+2. `../package.json`, `../pyproject.toml`, `../Cargo.toml`, or equivalent manifest
+3. `../index.html`, `../src/app/*`, `../src/pages/*` — landing page or main UI
+4. `../.env.example` — what services/APIs are integrated
+5. `../CLAUDE.md` or `../AGENT.md` — project context the developer has written
+6. Any `../docs/` directory
 
-1. If on `master`: you're editing the playbook itself. Only do this to improve strategies or add new ones.
-2. If on `startup/*`: you're executing marketing for a specific startup.
-   - Read `plan.md` for the startup's details and selected strategies
-   - Read `playbook.md` for the full strategy instructions
-   - Execute the **Agent Tasks** section for each selected strategy
-   - Commit outputs to the appropriate subdirectory (`content/`, `seo/`, `tools/`, `outreach/`, `aeo/`, `artifacts/`)
-   - Update the checklist and metrics in `plan.md` as you go
+From these, extract:
+
+| Field | How to find it |
+|---|---|
+| **Product** | What does the app do? (README, landing page) |
+| **Niche** | What industry or market? (README, manifest description) |
+| **Target Audience** | Who uses this? (landing page copy, docs) |
+| **Tech Stack** | Framework, hosting, APIs (manifest, env, imports) |
+| **Current Channels** | Any existing social links, blog, newsletter? (README, landing page footer) |
+| **Product URL** | Deployed URL if any (README, manifest homepage field) |
+| **One-line pitch** | First sentence of README or meta description |
+
+If you can't determine a field from the codebase, leave it as `[unknown — ask user]` and continue. Do not block on missing info.
+
+## Phase 2: Select Strategies
+
+Read `playbook.md` in this directory. Using the **Prioritization Matrix** and what you learned in Phase 1, select 2-3 strategies. Use these heuristics:
+
+| Signal from codebase | Strategy to prioritize |
+|---|---|
+| Product returns data or answers questions | **1. MCP Servers** |
+| Clear keyword patterns in the niche | **2. Programmatic SEO** |
+| Product has measurable inputs (scores, grades, metrics) | **3. Free Tool** |
+| Knowledge-heavy niche, lots of "how to" / "what is" queries | **4. AEO** |
+| Product generates user outputs, milestones, or stats | **5. Viral Artifacts** |
+| No existing audience, budget available | **6. Newsletter Acquisition** |
+| Founder can speak on the topic (podcast/video exists) | **7. Content Repurposing** |
+
+Default starting set if nothing stands out: **Strategy 3 (Free Tool) + Strategy 4 (AEO) + Strategy 7 (Content Repurposing)**.
+
+## Phase 3: Generate the Plan
+
+Write `plan.md` in this directory using `startup-template.md` as the structure. Fill in every field with real values from Phase 1. For the selected strategies:
+
+- Pull the **This Week Checklist** items from `playbook.md` into the execution status section
+- Pull the relevant **Success Metrics** into the metrics tracker
+- Tailor everything to this specific product — no placeholders, no generic language
+
+Commit `plan.md` when done.
+
+## Phase 4: Execute
+
+For each selected strategy, execute the **Agent Tasks** listed in `playbook.md`. Commit outputs to subdirectories:
+
+```
+marketing/
+  content/    — tweets, LinkedIn posts, newsletter drafts, blog posts
+  seo/        — keyword research, page templates, generated pages
+  tools/      — free tool specs, wireframes, or source code
+  outreach/   — newsletter targets, DM templates, acquisition research
+  aeo/        — FAQ content, schema markup, structured answers
+  artifacts/  — viral artifact designs, share copy, image specs
+```
+
+Work through one strategy at a time. After completing each strategy's tasks:
+1. Update the checklist in `plan.md`
+2. Commit the outputs
+3. Move to the next strategy
 
 ## Rules
 
-- Always fill in `{{VARIABLES}}` with real values before executing — never leave placeholders in outputs
-- Content must not feel like generic AI — add specifics, examples, and personality
+- Never leave `{{VARIABLES}}` or placeholder text in outputs — everything must be specific to this product
+- Content must sound human — add specifics, examples, opinions. Flag anything that feels like slop.
+- If the codebase doesn't give you enough info to execute a task, note what's missing in `plan.md` under Notes and move on
 - Commit frequently with descriptive messages
-- Update `plan.md` execution status after completing each task
+- Do not modify any files outside the `marketing/` directory
