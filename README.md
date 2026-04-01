@@ -41,3 +41,7 @@ git add plan.md && git commit -m "Initialize marketing plan for <name>"
 ## Source
 
 Strategies extracted from Greg Isenberg's *7 Growth Strategies for Vibe Coders* (Startup Ideas Podcast).
+
+## Agent Instructions
+
+See `AGENT.md` for LLM agent operating instructions.
