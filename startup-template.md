@@ -39,6 +39,18 @@ Based on the prioritization matrix in `playbook.md`, the recommended strategies 
 - [ ] _[task]_
 - [ ] _[task]_
 
+## Delivery Status
+
+- [ ] **Implemented locally** — repo files, drafts, or product code exist and were checked locally
+- [ ] **Deployed live** — the relevant changes are actually live on the product URL
+- [ ] **Externally verified** — live URLs, analytics, Search Console, or other external systems were checked directly
+
+## Implementation Handoff
+
+- _[highest-value task that requires changes outside `marketing/`]_
+- _[which product surface, route, or file needs to change]_
+- _[what can be verified locally vs what requires live deployment]_
+
 ## Metrics Tracker
 
 | Metric | Week 1 | Week 2 | Week 3 | Week 4 |
@@ -60,4 +72,4 @@ All generated marketing artifacts are organized in subdirectories:
 
 ## Notes
 
-_[Running log of decisions, pivots, and learnings]_
+_[Running log of decisions, pivots, blockers, and missing information]_
