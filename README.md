@@ -18,6 +18,7 @@ The agent will:
 2. **Select** — pick the best 2-3 strategies from the playbook
 3. **Plan** — generate a tailored `plan.md` with real tasks and metrics
 4. **Execute** — produce marketing artifacts (content, SEO pages, outreach, etc.)
+5. **Handoff** — when the next step requires app-code changes or live rollout, generate an implementation-ready handoff instead of endlessly expanding docs
 
 No manual setup. No forms to fill in. The protocol bootstraps from your code.
 
@@ -53,6 +54,20 @@ marketing/
   aeo/            — FAQ content, schema markup
   artifacts/      — viral artifact designs, share copy
 ```
+
+## Important Boundary
+
+By default, this playbook is designed to generate and organize marketing work inside `marketing/`.
+
+If the next valuable step requires:
+
+- publishing pages in the real app
+- wiring homepage or product UX changes
+- implementing share flows
+- adding analytics
+- submitting sitemaps or checking live behavior
+
+the agent should switch from content generation to an **implementation handoff** unless the user explicitly asks it to modify the product code.
 
 ## Source
 
