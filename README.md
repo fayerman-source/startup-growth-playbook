@@ -34,7 +34,7 @@ No manual setup. No forms to fill in. The protocol bootstraps from your code.
 | `playbook.md` | 8 distribution strategies with implementation steps and agent tasks |
 | `startup-template.md` | Plan structure (used by the agent, not by you) |
 
-## The 7 Strategies
+## The 8 Strategies
 
 1. **MCP Servers** — let AI assistants sell for you
 2. **Programmatic SEO** — generate thousands of keyword-targeted pages
@@ -43,6 +43,7 @@ No manual setup. No forms to fill in. The protocol bootstraps from your code.
 5. **Viral Artifacts** — make product outputs shareable
 6. **Newsletter Acquisition** — buy an audience for $5-20K instead of building from zero
 7. **Content Repurposing** — one pillar piece becomes 50+ across channels
+8. **Pre-Build Distribution Validation** — copy a proven competitor's Reel format and validate with paid early adopters before writing product code (consumer mobile focus)
 
 ## Output Structure
 
