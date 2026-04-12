@@ -440,7 +440,7 @@ This assumes the user has selected 2-3 strategies. Adapt based on their choices.
 
 ---
 
-## 11. Technical SEO Baseline
+## Technical SEO Baseline
 
 Content pages and structured data only work if the underlying HTML is fast, accessible, and correctly signaling to crawlers. This section covers what Lighthouse catches and what it doesn't — both must be addressed before shipping content at scale.
 
@@ -460,7 +460,7 @@ FAQPage and BreadcrumbList are the baseline (covered in the AEO strategy). But e
 
 **2. Semantic HTML landmarks**
 
-Wrap page content in `<main>`, navigation in `<nav aria-label="...">`, and use `<footer>` on every page. AI crawlers (Perplexity, ChatGPT browse, Gemini) use these landmarks to identify primary content. Lighthouse checks for landmark presence but doesn't flag missing `<main>` on content pages — it's a manual check.
+Wrap page content in `<main>`, navigation in `<nav aria-label="...">`, and use `<footer>` on every page. AI crawlers (Perplexity, ChatGPT browse, Gemini) use these landmarks to identify primary content. While Lighthouse (via axe) flags content outside of landmarks, it can't tell whether `<main>` correctly encapsulates the unique primary content of the page vs. wrapping boilerplate — that requires manual review.
 
 **3. robots meta audit**
 
@@ -472,11 +472,11 @@ Content pages (guides, idea lists, validation pages) often launch without footer
 
 **5. `og:image:alt` on all pages**
 
-Most pages include `og:image` but skip `og:image:alt`. Some crawlers and social platforms use the alt text. Add it as standard practice alongside `og:image`.
+Most pages include `og:image` but skip `og:image:alt`. It's a cheap accessibility win (screen readers reading shared links) and future-proofs against crawlers that may consume it. Add it alongside every `og:image`.
 
 ### Agent Tasks
 
-- [ ] Run Lighthouse (mobile) on 1 page per type — landing, workspace, /learn/, /ideas/, /validate/
+- [ ] Run Lighthouse (mobile) on 1 page per type — landing, workspace, and each core content directory
 - [ ] Fix all flagged issues before shipping content batches
 - [ ] Verify structured data with Rich Results Test on 1 page per type
 - [ ] Confirm `<main>` landmark present on all content pages
