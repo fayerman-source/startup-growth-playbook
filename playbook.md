@@ -538,7 +538,7 @@ When executing this strategy, you should:
 - Draft the Stripe-linked landing page HTML (Mode A) or the UTM routing plan (Mode B)
 - Draft the GPT caption prompt with the seed captions, hook formula, and emoji palette pre-filled
 - Propose the kill criteria in explicit numbers tied to `{{BUDGET}}` and timeline
-- If iOS: write the step-by-step App Store Connect pre-order configuration checklist, including the release-date push-back reminder
+- If iOS: write the step-by-step App Store Connect pre-order configuration checklist, including release-date confidence checks and an exceptional-delay communication plan
 - Flag IP-risk elements in any template that crosses from structural copying into brand-asset copying
 
 ---
