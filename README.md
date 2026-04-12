@@ -31,7 +31,7 @@ No manual setup. No forms to fill in. The protocol bootstraps from your code.
 | File | Purpose |
 |---|---|
 | `AGENT.md` | Self-bootstrapping protocol — the agent reads this first |
-| `playbook.md` | 7 distribution strategies with implementation steps and agent tasks |
+| `playbook.md` | 8 distribution strategies with implementation steps and agent tasks |
 | `startup-template.md` | Plan structure (used by the agent, not by you) |
 
 ## The 7 Strategies
