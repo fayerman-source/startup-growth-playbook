@@ -440,6 +440,51 @@ This assumes the user has selected 2-3 strategies. Adapt based on their choices.
 
 ---
 
+## Technical SEO Baseline
+
+Content pages and structured data only work if the underlying HTML is fast, accessible, and correctly signaling to crawlers. This section covers what Lighthouse catches and what it doesn't — both must be addressed before shipping content at scale.
+
+### Run Lighthouse on every public page
+
+Run mobile Lighthouse audits (Performance, Accessibility, Best Practices, SEO) on every page type before launch and after each batch ships. Fix everything flagged. Target 90+ on all four categories.
+
+Lighthouse catches: image sizing, render-blocking resources, color contrast, missing alt text, ARIA errors, missing meta descriptions, broken links, slow server response. These are table stakes — if Lighthouse flags it, fix it before moving on.
+
+### What Lighthouse does not catch
+
+These require manual review or structured-data tooling:
+
+**1. Structured data beyond FAQPage**
+
+FAQPage and BreadcrumbList are the baseline (covered in the AEO strategy). But editorial content pages should also carry Article schema with publisher and author. Tool/workspace pages that offer a free tier should carry WebApplication with an Offer block signaling the free access. Validate with Google's Rich Results Test after deploying.
+
+**2. Semantic HTML landmarks**
+
+Wrap page content in `<main>`, navigation in `<nav aria-label="...">`, and use `<footer>` on every page. AI crawlers (Perplexity, ChatGPT browse, Gemini) use these landmarks to identify primary content. While Lighthouse (via axe) flags content outside of landmarks, it can't tell whether `<main>` correctly encapsulates the unique primary content of the page vs. wrapping boilerplate — that requires manual review.
+
+**3. robots meta audit**
+
+Verify that every page intended for public discovery has `<meta name="robots" content="index,follow">`. Pages behind authentication or in development commonly carry `noindex,nofollow` from early iterations — this is easy to forget when the page later becomes public. Check this explicitly on every page that should rank.
+
+**4. Footer navigation on content pages**
+
+Content pages (guides, idea lists, validation pages) often launch without footer links. Crawlers use footer links to discover site structure. Every content page should link back to the homepage, the workspace, and legal pages at minimum.
+
+**5. `og:image:alt` on all pages**
+
+Most pages include `og:image` but skip `og:image:alt`. It's a cheap accessibility win (screen readers reading shared links) and future-proofs against crawlers that may consume it. Add it alongside every `og:image`.
+
+### Agent Tasks
+
+- [ ] Run Lighthouse (mobile) on 1 page per type — landing, workspace, and each core content directory
+- [ ] Fix all flagged issues before shipping content batches
+- [ ] Verify structured data with Rich Results Test on 1 page per type
+- [ ] Confirm `<main>` landmark present on all content pages
+- [ ] Confirm `robots` meta is `index,follow` on all public pages
+- [ ] Confirm footer navigation present on all content pages
+
+---
+
 ## Appendix: Key Quotes and References
 
 - "Distribution first, product second. Always." — Greg Isenberg
