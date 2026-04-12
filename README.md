@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/hero.jpg" alt="Startup Growth Playbook" width="100%">
+</p>
+
 # Startup Growth Playbook
 
 Distribution-first marketing strategies for AI-era startups. Clone into any project directory and let an LLM agent auto-generate and execute a marketing plan from the codebase.
