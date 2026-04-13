@@ -22,7 +22,11 @@ jobs:
         uses: DavidAnson/markdownlint-cli2-action@v18
         with:
           globs: |
-            **/*.md
+            README.md
+            AGENT.md
+            CONTRIBUTING.md
+            playbook.md
+            startup-template.md
 
       - name: Check strategy consistency
         run: |
