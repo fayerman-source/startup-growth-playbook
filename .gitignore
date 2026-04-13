@@ -21,3 +21,9 @@ desktop.ini
 # Local tool artifacts
 .codex
 nanobanana-output/
+
+# Scraped datasets (raw JSON gitignored due to size; processed summaries live under research/)
+dataset_ig-reels-scraper_*.json
+
+# Windows mark-of-the-web sidecars
+*:Zone.Identifier

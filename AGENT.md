@@ -40,11 +40,11 @@ Read `playbook.md` in this directory. Using the **Prioritization Matrix** and wh
 | Product generates user outputs, milestones, or stats | **5. Viral Artifacts** |
 | No existing audience, budget available | **6. Newsletter Acquisition** |
 | Founder can speak on the topic (podcast/video exists) | **7. Content Repurposing** |
-| Native iOS/Android consumer app with visual/competitive/gamified mechanics (social, leaderboards, habit tracking, etc.) | **8. Pre-Build Distribution Validation** |
+| Native iOS/Android consumer app with visual/competitive/gamified mechanics (social, leaderboards, habit tracking, etc.) | **8. Parallel IG Reels Engine** |
 
 Default starting set if nothing stands out: **Strategy 3 (Free Tool) + Strategy 4 (AEO) + Strategy 7 (Content Repurposing)**.
 
-Note: Strategy 8 is niche-specific — only surface it when the product is a consumer mobile app and there is at least one non-VC-funded incumbent in the category sustaining $100k+/month for 12+ months. If those gates aren't cleared, skip it even when the product type matches.
+Note: Strategy 8 is niche-specific — only surface it when the product is a consumer mobile app, there is at least one non-VC-funded incumbent in the category sustaining $100k+/month for 12+ months, and the team can realistically commit one operator to a 5-6 month content grind. If those gates aren't cleared, skip it even when the product type matches.
 
 ## Phase 3: Generate the Plan
 
