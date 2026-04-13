@@ -397,7 +397,7 @@ When executing this strategy, you should:
 **Priority:** High (for consumer mobile apps with visual, competitive, gamified, or habit-tracking mechanics)
 **Time to first result:** 5–6 months on a fresh discovery account; 2–4 weeks on a sibling launch account once the format is validated
 **Best for:** Native iOS/Android consumer apps whose value proposition can be visually or emotionally teased in a 5–10 second short-form video. Teams willing to commit one operator to 10–15 hours per week for 6+ months of sustained content production.
-**Skip if:** B2B SaaS, developer tools, APIs, agencies, enterprise sales. Niches where no non-VC-funded competitor has sustained $100k+/month for 12+ months. Products that cannot be visually teased in under 10 seconds. Teams unwilling to engage with meme-remix content (which sits in copyright grey territory).
+**Skip if:** B2B SaaS, developer tools, APIs, agencies, enterprise sales. Niches where no non-VC-funded competitor has sustained $100k+/month for 12+ months. Products that cannot be visually teased in 10 seconds or less. Teams unwilling to engage with meme-remix content (which sits in copyright grey territory).
 
 ### Why it works
 
@@ -548,7 +548,7 @@ When executing this strategy, you should:
 - Draft the Mode A fake landing page HTML with a Stripe Payment Link and waitlist capture, OR the Mode B per-reel UTM routing plan
 - Write the explicit kill criteria in terms of posts-to-first-100k and posts-to-first-500k, tied to `{{BUDGET}}` and timeline
 - If iOS and pre-launch: produce the App Store Connect pre-order configuration document including the 2-to-180-day release window constraint and the exceptional-delay communication plan
-- Flag IP-risk elements in any template that crosses from structural copying into brand-asset copying
+- Flag IP-risk elements in any template or clip selection that crosses from structural copying into brand-asset copying or copyright infringement
 - Recommend whether the team is resourced for a parallel Account B launch and, if so, draft the secondary account's bio and cross-promotion caption pattern
 
 ---
