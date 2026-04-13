@@ -2,7 +2,7 @@
 
 > **Sources:**
 > - Strategies 1–7 — Greg Isenberg, *7 Growth Strategies for Vibe Coders* (Startup Ideas Podcast)
-> - Strategy 8 — Caleb Dean, *Runify acquisition playbook* ([Superwall Podcast](https://www.youtube.com/watch?v=yw5iIgO4PbY) with Joseph Choy)
+> - Strategy 8 — Caleb Dean, *Runify Acquisition Playbook* ([Superwall Podcast with Joseph Choy](https://www.youtube.com/watch?v=yw5iIgO4PbY))
 >
 > **Core thesis:** Code is commoditized. Distribution is the new moat. Build the audience first, then build the product.
 
