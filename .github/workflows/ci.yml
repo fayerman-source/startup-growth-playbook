@@ -1,0 +1,85 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: read
+
+jobs:
+  docs:
+    name: Docs Checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Lint Markdown
+        uses: DavidAnson/markdownlint-cli2-action@v18
+        with:
+          globs: |
+            **/*.md
+
+      - name: Check strategy consistency
+        run: |
+          set -euo pipefail
+
+          python3 <<'PY'
+          import pathlib
+          import re
+          import sys
+
+          root = pathlib.Path(".")
+          playbook = (root / "playbook.md").read_text()
+          readme = (root / "README.md").read_text()
+          agent = (root / "AGENT.md").read_text()
+
+          strategy_count = len(re.findall(r"^## Strategy \d+:", playbook, re.MULTILINE))
+          if strategy_count < 1:
+              sys.exit("playbook.md does not define any strategy sections")
+
+          readme_heading = re.search(r"^## The (\d+) Strategies$", readme, re.MULTILINE)
+          if not readme_heading:
+              sys.exit("README.md is missing the 'The N Strategies' heading")
+          if int(readme_heading.group(1)) != strategy_count:
+              sys.exit(
+                  f"README.md says {readme_heading.group(1)} strategies, "
+                  f"but playbook.md defines {strategy_count}"
+              )
+
+          playbook_preamble = re.search(
+              r"contains (\d+) distribution strategies",
+              playbook,
+          )
+          if not playbook_preamble:
+              sys.exit("playbook.md is missing the 'contains N distribution strategies' line")
+          if int(playbook_preamble.group(1)) != strategy_count:
+              sys.exit(
+                  f"playbook.md preamble says {playbook_preamble.group(1)} strategies, "
+                  f"but the file defines {strategy_count}"
+              )
+
+          heuristic_numbers = {
+              int(match)
+              for match in re.findall(r"\|\s+\*\*(\d+)\.", agent)
+          }
+          expected = set(range(1, strategy_count + 1))
+          if heuristic_numbers != expected:
+              sys.exit(
+                  "AGENT.md strategy heuristics are out of sync. "
+                  f"Expected strategy numbers {sorted(expected)}, "
+                  f"found {sorted(heuristic_numbers)}"
+              )
+
+          print(
+              "Strategy consistency checks passed:",
+              {
+                  "strategy_count": strategy_count,
+                  "heuristic_numbers": sorted(heuristic_numbers),
+              },
+          )
+          PY
