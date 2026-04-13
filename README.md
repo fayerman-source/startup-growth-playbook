@@ -43,7 +43,7 @@ No manual setup. No forms to fill in. The protocol bootstraps from your code.
 5. **Viral Artifacts** — make product outputs shareable
 6. **Newsletter Acquisition** — buy an audience for $5-20K instead of building from zero
 7. **Content Repurposing** — one pillar piece becomes 50+ across channels
-8. **Pre-Build Distribution Validation** — copy a proven competitor's Reel format and validate with paid early adopters before writing product code (consumer mobile focus; credit: Caleb Dean / Runify, via [Superwall Podcast](https://www.youtube.com/watch?v=yw5iIgO4PbY))
+8. **Parallel Instagram Reels Content Engine** — high-volume meme-remix short-form video across parallel Instagram accounts for consumer mobile apps (5-6 month grind; credit: Caleb Dean / Runify, via [Superwall Podcast](https://www.youtube.com/watch?v=yw5iIgO4PbY); primary-source analysis in [research/runify-content-engine-analysis.md](research/runify-content-engine-analysis.md))
 
 ## Output Structure
 

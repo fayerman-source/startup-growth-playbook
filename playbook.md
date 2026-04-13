@@ -392,157 +392,164 @@ When executing this strategy, you should:
 
 ---
 
-## Strategy 8: Pre-Build Distribution Validation via Competitor Format Replication
+## Strategy 8: Parallel Instagram Reels Content Engine (Consumer Mobile)
 
-**Priority:** High (for consumer mobile apps with visual/competitive/gamified mechanics)
-**Time to first result:** 2-4 weeks
-**Best for:** Native iOS/Android consumer apps — especially social, competitive, gamified, or habit-tracking categories where a short-form video can demo the value in under 15 seconds
-**Skip if:** B2B SaaS, dev tools, APIs, agencies, enterprise sales, or niches where no non-VC-funded competitor has sustained $100k+/month for 12+ months (no proven format to copy = no signal to trust)
+**Priority:** High (for consumer mobile apps with visual, competitive, gamified, or habit-tracking mechanics)
+**Time to first result:** 5–6 months on a fresh discovery account; 2–4 weeks on a sibling launch account once the format is validated
+**Best for:** Native iOS/Android consumer apps whose value proposition can be visually or emotionally teased in a 5–10 second short-form video. Teams willing to commit one operator to 10–15 hours per week for 6+ months of sustained content production.
+**Skip if:** B2B SaaS, developer tools, APIs, agencies, enterprise sales. Niches where no non-VC-funded competitor has sustained $100k+/month for 12+ months. Products that cannot be visually teased in under 10 seconds. Teams unwilling to engage with meme-remix content (which sits in copyright grey territory).
 
 ### Why it works
 
-This strategy inverts the usual build-then-market sequence. You validate demand with paid early adopters before writing the product — or, if you've already started building, you compress CAC by routing the same content engine at your existing app. The core insight, popularized by Caleb Dean (founder of [Runify](https://www.runify.xyz/), acquired for six figures ~28 days after launch), is that **a proven competitor's organic video format is the highest-signal, lowest-risk creative you can deploy** — it has already been algorithm-tested against your target audience.
+Short-form video platforms — Instagram Reels specifically — reward watch time at scale. A 5–10 second reaction clip assembled from popular cultural footage (movies, animations, viral moments) with an emotional one-line caption gets watch-time credit far out of proportion to its production cost. You are not competing on polish. You are competing on recognition-plus-variation and on raw volume.
 
-Caleb's documented results on Runify: 5M Instagram views in month one, 2,000 waitlist emails, 90 paid ($5) early adopters, and 3,000 same-day App Store downloads on launch — all before a real month of revenue existed. Source: [Superwall Podcast with Joseph Choy](https://www.youtube.com/watch?v=yw5iIgO4PbY). Sample size is one founder and a small exit; treat the headline outcomes as a tail event, but the underlying mechanics as a repeatable operating system.
+This strategy was popularized by Caleb Dean (founder of [Runify](https://www.runify.xyz/), acquired for six figures in early 2026). The honest version of his playbook only becomes visible once you inspect the primary artifacts rather than his podcast interview. We scraped both of Runify's Instagram accounts and documented the gap in full under [`research/runify-content-engine-analysis.md`](research/runify-content-engine-analysis.md) — **read that before executing this strategy.** The short version:
 
-The strategy has two modes. Run **Mode A** if you haven't built yet. Run **Mode B** if your app is live (or close to it) and you need organic traction.
+- Runify ran **two parallel Instagram accounts** (`@runifyyy` and `@runifyy.app` — the second account's bio explicitly says "Runifyyy second account"), together producing **901 reels over 9 months for 22.7M cumulative plays**.
+- Peak cadence was **~5 posts/day per account**, **11.3/day combined** during burst weeks, with a single-day peak of **19 posts** on the primary account alone. The "9 reels per day" framing Caleb described on the [Superwall Podcast](https://www.youtube.com/watch?v=yw5iIgO4PbY) is defensible only when you add both accounts together.
+- Algorithmic lift on the primary account came **around month 6** (October 2025: 22 posts delivered 5.7M plays, including a 4.1M-play single hit), not in month one. The "5 million views in month one" framing in the interview referred to the **secondary account's first 30 days** after its August 2025 launch — a deliberate second surface opened only after the format had been validated on the primary.
+- The dominant content format is **meme-remix reaction videos** — short clips from popular movies, animations, and cultural moments, stitched together in CapCut with 1–5 word emotional captions like `"WTF!"`, `"are we cooked???"`, `"stfu lil bro"`. Not the engineered ranking-graphic templates Caleb showcased in the interview. Ranking-themed CTA content existed in Runify's feed but was only a ~15–20% interleave, not the main event.
+- Hit rate is extremely asymmetric: **~2.5% of posts cleared 100k plays, ~1% cleared 500k, ~0.5% cleared 1M**. The top 5–7 posts carried the majority of all cumulative plays.
 
-### Mode A: Pre-Build Validation
+The strategy is real and the exit was real, but it is not "an engineered parameterized content engine." It is **a multi-month grind of cheap short-form meme content across parallel accounts, betting on asymmetric hit distribution**. Anyone considering this playbook needs to go in with clear eyes about the timeline, the labor cost, and the IP stance.
 
-Goal: prove willingness-to-pay before you write a line of product code.
+### Two modes
 
-1. **Ideation gate.** Enter a niche only if it passes three filters:
-   - At least 1-3 incumbent apps doing $100k+/month (check Sensor Tower, AppMagic, or appfigures)
-   - Those apps have sustained that revenue for 12+ months (not a 3-month blip)
-   - None of them are VC-funded past a seed round (their economics don't validate yours — check Crunchbase)
-2. **Pick a wedge, not a clone.** Don't rebuild the incumbent. Shift the angle: Liftoff = ranked gym workouts → Runify = ranked running. Same mechanic, different TAM. Aim for founder-market fit — if you aren't a user of the thing you're building, skip the idea.
-3. **Fake the product.**
-   - One-page landing site. ChatGPT-generated HTML is fine. Route to a [Stripe Payment Link](https://stripe.com/payments/payment-links) charging $5 for a "lifetime early adopter" slot.
-   - Below-the-fold email waitlist capture as a softer conversion option.
-   - Three mock screenshots in Figma pinned to the Instagram profile. No real product needed.
-4. **Deploy the content engine** (see the dedicated subsection below).
-5. **Watch the signal, not the vanity.** Waitlist emails are cheap. Paid $5 conversions are honest. Target for validation: 30+ paid adopters within 14 days of hitting 50 reels posted.
-6. **Kill criteria.** If after 4 weeks and ≥50 posted videos you have <10 paid adopters and <500 waitlist, the niche is dead. Move on. Don't build.
-7. **If validated, the paid early adopters become your product council.** Personal WhatsApp/email outreach within 48 hours of each payment. Build a TestFlight group from them. Use Instagram Stories polls for feature decisions (e.g., "Which watch do you use? Apple / Garmin / Strava / None") before committing engineering time.
+**Mode A — Pre-build validation.** You don't have a product yet. The content engine drives traffic to a fake landing page with a [Stripe Payment Link](https://stripe.com/payments/payment-links) ($5 "lifetime early adopter") and an email waitlist. The signal you are measuring is paid willingness-to-pay.
 
-### Mode B: Post-Build Acquisition Engine
+**Mode B — Post-build acquisition.** You have a shipped (or near-shipped) product. The content engine drives traffic to your real App Store listing or checkout page. Measurement shifts from willingness-to-pay to CAC payback against your paywall or conversion flow.
 
-Goal: compress CAC on an already-shipped (or near-shipped) product using the same content primitives.
+Both modes share the same content engine, the same multi-account infrastructure, the same 5–6 month timeline on the discovery account, and the same asymmetric hit distribution. Only the landing surface and the measurement metric differ.
 
-1. **Competitor format audit is still step one** — you run the same reverse-engineering process, but on competitors adjacent to your existing positioning rather than competitors in a niche you're evaluating.
-2. **Route traffic at the real product** — App Store / Play Store listing or landing page with checkout — instead of a fake landing page. Add per-video UTMs so every reel is attributable.
-3. **Measurement shifts.** Instead of measuring willingness-to-pay signal, measure CAC payback against your paywall or checkout. A reel that costs $0 to produce and drives 3 paying users at $10/mo LTV is infinite ROAS; a reel that drives 100 views and 0 installs is a killed format.
-4. **iOS App Store pre-order as a relaunch lever.** If you're about to ship a major version — or haven't yet launched v1.0 — the pre-order trick (see dedicated subsection) turns your entire content-engine run-rate into a launch-day seed of real installs.
-5. **Everything else is identical to Mode A:** same format audit, same template construction, same 9x/day cadence, same kill criteria applied to individual formats rather than the whole niche.
+### The Content Engine — four stages
 
-### The Content Engine
+**Stage 1 — Incumbent and format audit.**
 
-This is the operational core. The goal is to produce enough format variations at enough volume that you're not gambling on a single reel going viral — you're running a distribution of many reels where the top 10% carry the economics.
+Spend one week studying what's already winning in your niche before you make anything.
 
-**Honest caveat:** Caleb Dean has publicly described the outcomes and the high-level mechanic (a custom tool generating ~10,000 variations in under a minute), but has not disclosed his exact tech stack, scheduling tool, or caption-generation approach. The operational spec below is grounded in his principles but uses off-the-shelf tooling any team can adopt. Treat specific tool choices as defaults to be swapped based on team shape.
+1. Identify 1–3 incumbent apps in your target category doing $100k+/month for 12+ months using Sensor Tower, AppMagic, or appfigures. Rule out anything VC-funded past a seed round — their economics don't validate yours. Check Crunchbase for funding history.
+2. Find each incumbent's Instagram presence. Scroll their top 50 reels by plays. Tag each in a spreadsheet by: **hook style** (first 1.5s — question, shock, emotional reaction, stat), **visual source** (movie clip, animation, stock footage, user-generated, screen recording), **overlay pattern** (text location and motion), **duration**, **caption length and tone**, **CTA**, **play count**.
+3. Identify the 1–2 content patterns the incumbent is actually winning with. Usually the distribution is bimodal: one "meme-remix reaction interleave" driving the viral hits, and one "functional engagement CTA" format driving baseline conversions. Runify's split was roughly 80% meme-remix and 15–20% rank-themed CTAs.
 
-**Stage 1 — Format Audit.**
+**Stage 2 — Content: meme-remix plus functional-CTA interleave.**
 
-1. From the ideation gate, you have 1-3 target incumbents. Pick the one whose distribution you can most plausibly copy.
-2. Download the top 20-50 performing reels from their Instagram account. Tools: [instaloader](https://instaloader.github.io/), [yt-dlp](https://github.com/yt-dlp/yt-dlp), or a paid competitor-intelligence service (SocialBlade, ViewStats, Foreplay.co).
-3. Tag each video in a spreadsheet by: **hook style** (first 1.5s — question / stat / controversial claim / visual shock), **visual structure** (layout, motion pattern, text overlay placement), **length**, **caption pattern**, **CTA**, **view count**.
-4. Sort by view count. Identify the 1-3 recurring winning patterns. You're looking for formats that performed well at least 3 times — once is luck.
+You are producing two kinds of content in parallel, not one.
 
-**Stage 2 — Template Construction.**
+**Type 1 — Meme-remix reaction videos (~80% of output).** Short clips (5–10 seconds) from popular cultural footage — movies, animations, reality TV, viral moments — with a 1–5 word emotional caption that frames the clip through your niche's lens. Examples from Runify's actual feed:
 
-Recreate ONE winning format as a parameterized template. Any visual or text element that can vary becomes a variable.
+- `"WTF!"` (6.8s)
+- `"are we cooked???"` (6.8s)
+- `"she didn't call back… still don't know why 😭"` (movie scene + running overlay)
+- `"i'm different"` (7.5s)
+- `"Me selling a half marathon like it's a coffee run @runifyyy"` (Wolf of Wall Street-style edit)
+- `"stfu lil bro @runifyyy"` (5.0s)
 
-Pick your stack by team shape:
+**Type 2 — Functional engagement CTAs (~15–20%).** Short videos explicitly asking the audience to interact with your product's core primitive. Runify examples:
 
-- **Dev-led team — recommended default: [Remotion](https://www.remotion.dev/).** React-based programmatic video. You write components, pass data as props, render to MP4 via headless Chrome. Runs on your machine or on Lambda. Ideal for volume >1,000/month. MIT-licensed, open source.
-- **No-code / low-code team: [Creatomate](https://creatomate.com/) or [Bannerbear](https://www.bannerbear.com/).** API-driven template rendering, Figma import, pay-per-render pricing. Cheapest path if you need fewer than 1,000 renders/month.
-- **Designer-led team: Adobe After Effects + Essential Graphics + aerender batch script** with a CSV data-merge. Familiar tooling for motion designers; the aerender CLI lets you queue hundreds of renders overnight.
+- `"What rank are u?"`
+- `"Comment 'Rank' to get your running rank 😈"`
+- `"Share your rank on ur story"`
+- `"Tag a bronze friend"`
 
-**Stage 3 — Variation Generation.**
+Type 2 videos perform at baseline (~2–8k plays each) but function as the conversion mechanism that turns viral Type 1 traffic into app installs. Do not skip them. They are how the viral pull of Type 1 content actually monetizes.
 
-1. Build a variation dataset as a CSV or JSON file. Example for a ranked running app: 500 distances × 5 rank tiers × 10 medal styles = 25,000 theoretically possible combinations. You don't need all of them — you need a randomized sample large enough to produce 3-10 unique reels per day for 30 days.
-2. **Caption engine.** Write a ChatGPT/Claude prompt seeded with: 5 of the highest-performing competitor captions, your hook formula (question / controversial claim / number), your emoji palette, your hashtag set. Ask for 20 variants per video. Pick the best manually for the first week until you have a sense of what lands, then automate selection via a simple engagement heuristic.
-3. **Render, review, reject.** Sample-check the first 20 renders by eye. If any format looks broken (overlapping text, bad timing, wrong colors), fix the template — not the data.
+**Tool stack.** [CapCut](https://www.capcut.com/) (free) for clip editing, caption overlay, trimming, and speed ramps. A hand-curated clip library — you build this yourself from culturally relevant movies, animations, and shows your audience will recognize. A caption-generation prompt for GPT-4 or Claude, seeded with 5–10 of your highest-performing competitor captions plus a 1–5 word length cap and an emotional tone spec. A scheduler — [Metricool](https://metricool.com/), [Later](https://later.com/), [Buffer](https://buffer.com/), or Meta Business Suite. Total monthly tool cost: $0–$50.
 
-**Stage 4 — Distribution & Measurement.**
+**Do NOT reach for Remotion, Creatomate, Bannerbear, or other parameterized React-video rendering platforms.** Those are built for engineered-template-at-scale workflows, which is explicitly not what this playbook does. This playbook is manual clip remixing at high throughput, not programmatic layered rendering. Using a parameterized video framework here will slow you down and produce the wrong kind of content.
 
-1. **Scheduling tool.** [Metricool](https://metricool.com/), [Later](https://later.com/), [Buffer](https://buffer.com/), or Instagram's native Creator Studio / Business Suite scheduler all work. Buffer is the cheapest; Metricool has the best analytics.
-2. **Cadence.** Caleb reported that Instagram tolerates up to 9 reels/day at time of writing. TikTok punishes volume — cap at 1-2/day there. **Caveat:** algorithm behavior changes. Verify current guidance before committing to 9x/day, and ramp up from 3/day to confirm you're not getting shadowbanned.
-3. **Attribution.** Each scheduled reel gets a unique UTM on its landing URL (e.g., `?utm_source=ig&utm_medium=reel&utm_campaign=format_a&utm_content=v042`). You can't optimize what you can't measure.
-4. **Kill threshold.** Any individual video under 500 views after 24 hours is a dead format variant — don't repost. Double down on the top 10% by remixing their specific visual or caption elements into new variations.
-5. **Expected distribution.** Most videos get 3-10k views. One in 10 breaks 50k. One in 50 breaks 500k. Math works only if you're posting enough volume to reliably hit the long tail.
+**Stage 3 — Multi-account parallel infrastructure.**
+
+The single most important operational detail, and the one omitted from every public version of this story.
+
+Instagram throttles individual accounts that sustain high post counts — the exact threshold varies, but reach suppression starts appearing around 5–7 posts per day held across weeks on a single account. To hit the **combined cadences** that actually feed the algorithm (10+ posts/day across sustained weeks), you need multiple accounts posting in parallel.
+
+1. **Account A — the discovery account.** Grind here for 4–6 months to find and validate the format. Expect most posts to land in the 3–10k play range during this phase. This account's purpose is not to break out — it is to train the algorithm, catalog what works, and serve as your format library. Runify's primary account (`@runifyyy`) ran 536 posts through its first 4 months before its October lift.
+2. **Account B — the launch account.** Open this only once you have 3+ format variants that have proven they can clear 100k plays on Account A. Account B launches directly into validated formats, bypassing the grinding phase, and serves as your actual "month one" surface. Runify's secondary account (`@runifyy.app`) produced 5.2M plays in its first 30 days after launching into already-validated formats — that's where the headline "5M in month one" claim actually lives.
+3. **Caption diversity discipline.** Keep caption overlap between parallel accounts **below ~15%** to avoid Instagram's duplicate detection. Runify's two accounts ran at 10.4% caption overlap, meaning they produced genuinely different content — not duplicates with copy-pasted captions. This is a true volume multiplier, not a mirroring play.
+4. **Cross-promotion pattern.** Both accounts tag each other in captions, e.g., `"what rank are u? @runifyyy"` posted from `@runifyy.app`. This funnels viral traffic from breakout posts between accounts without triggering spam filters.
+5. **Follower graph.** Neither Runify account follows more than 5 other accounts. Keep the `following` count minimal — it reads as "brand account" to the algorithm and avoids the network-seeding patterns that trigger spam classifiers.
+
+If you are genuinely constrained to a single account, this strategy still works, but expect roughly half the combined cadence and a correspondingly longer runway to the first algorithmic lift.
+
+**Stage 4 — Distribution, measurement, and the 5-month grind.**
+
+1. **Cadence.** Aim for 3–5 posts/day per account sustained, with burst weeks reaching 8–12 posts/day combined across both accounts. Runify's peak 7-day window averaged 11.3 posts/day across two accounts, with one day hitting 19 posts on the primary alone.
+2. **Timeline expectations.** Plan for **no algorithmic lift in the first 4–5 months** on the discovery account. This is the default pattern, not a failure mode. Your first 100–200 posts will mostly get 3–10k plays each. Do not pivot away until you hit post 300 without a single 100k+ breakout.
+3. **Kill criteria.**
+   - **On the niche overall:** 0 posts above 100k plays in the first 300 posts = niche or format is dead, move on.
+   - **On individual format variants:** any variant averaging under 3k plays across 10 attempts = kill the variant and try another.
+   - **On the playbook entirely:** 0 posts above 500k plays in the first 500 posts = this approach isn't working for your product, pick a different strategy.
+4. **Attribution.** Per-reel UTMs on the landing URL (e.g., `?utm_source=ig&utm_medium=reel&utm_campaign=runifyyy&utm_content=v042`). In Mode A, track which reels drive waitlist signups vs. paid $5 conversions. In Mode B, track which reels drive installs and paying users.
+5. **Expected play distribution.** Your posts will follow an extremely asymmetric distribution: ~2.5% clear 100k plays, ~1% clear 500k, ~0.5% clear 1M. The top 5–10 posts will carry more than half of your cumulative plays. If your distribution is flatter than this, you are producing content that is too safe. Push harder on the emotional-reaction hooks and the more culturally-loaded clip choices.
 
 ### iOS App Store Pre-Order Seeding
 
-A tactic that solves the cold-start problem for social/competitive/leaderboard apps, and is under-documented in the indie mobile space.
+Still a real tactic for social/competitive/leaderboard apps, with honest framing on the constraints.
 
-1. **How it works.** Once you have a bare-bones v1 approved by Apple (two tabs, no onboarding — literally the minimum viable submission), you can list the app as a [pre-order](https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/publish-for-pre-order/). Users who "pre-order" auto-install on release day and receive an official Apple notification announcing the launch.
-2. **Why it matters for social apps.** On day one, 3,000 real users arriving simultaneously fills a leaderboard within the hour. Anyone who installs in week two sees an active app, not a ghost town. This is the single most effective cold-start solver available to indie iOS developers, and nobody talks about it.
-3. **Release date constraints (verify before relying on this).** Apple requires the pre-order release date to sit between **2 and 180 days** in the future for first-time releases (raised from 90 days in October 2020 — re-verify in [Apple's App Store Connect docs](https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/publish-for-pre-order/) before executing). You can change the release date during the pre-order window, but **Apple does not notify existing pre-orderers when you change it** — every silent push-back erodes the trust of users who committed to a specific launch day. Pick a date you are genuinely confident you can ship, not a date you plan to serially push back.
-4. **Cautionary tale, not a workaround.** Caleb Dean accidentally released Runify early because his operating model was to push the release date every few days to keep the pre-order alive, and he forgot to do it one day. The fact that this "workaround" exists at all is a smell — it tells you the push-back-serially strategy is fragile. Better practice: commit to a realistic date inside the 180-day window, hold yourself to it, and treat any push-back as an exceptional event that requires active outreach (Instagram Story, email to the waitlist) to users who pre-ordered on the old date.
-5. **Routing.** During the content engine run, route a fraction of Instagram traffic to the pre-order App Store link alongside your landing page. Both the paid Stripe validation and the pre-order queue accumulate in parallel.
+1. **How it works.** Once you have a bare-bones v1 approved by Apple (two tabs, no onboarding — literally the minimum viable submission), list the app as a [pre-order](https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/publish-for-pre-order/). Users who pre-order auto-install on release day and receive an official Apple notification announcing the launch.
+2. **Why it matters for social apps.** On day one, 3,000 real users arriving simultaneously fills a leaderboard within the hour. Anyone who installs in week two sees an active app, not a ghost town. Runify seeded ~3,000 same-day installs this way, which was material for leaderboard density.
+3. **Release date constraints.** Apple requires the pre-order release date to sit between **2 and 180 days** in the future for first-time releases (raised from 90 days in October 2020 — re-verify in [Apple's App Store Connect docs](https://developer.apple.com/help/app-store-connect/manage-your-apps-availability/publish-for-pre-order/) before committing). You can change the release date during the pre-order window, but **Apple does not notify existing pre-orderers when you change it** — every silent push-back quietly erodes the trust of users who committed to a specific launch day. Pick a date you are genuinely confident you can ship. Do not plan to serially push it back.
+4. **Cautionary tale, not a workaround.** Caleb accidentally released Runify early because his operating model was to push the release date every few days to keep the pre-order alive, and he forgot one day. The fact that this "workaround" exists is a smell — the push-back-serially strategy is fragile. Better practice: commit to a realistic date inside the 180-day window, hold yourself to it, and treat any push-back as an exceptional event requiring active outreach (Instagram Story, email to the waitlist) to everyone who pre-ordered on the old date.
+5. **Routing during the content engine run.** Route a fraction of Instagram traffic to the pre-order App Store link alongside your landing page. In Mode A, the paid Stripe validation and the pre-order queue accumulate in parallel. In Mode B, the pre-order seeding adds a launch-day bump on top of your existing organic pipeline.
 
 ### This Week Checklist
 
-- [ ] Use Sensor Tower / AppMagic / appfigures to find 3 incumbent apps in `{{NICHE}}` doing $100k+/mo
-- [ ] Filter out any that are VC-funded past seed — check Crunchbase
-- [ ] Download the top 20-30 performing reels from the chosen incumbent's Instagram
-- [ ] Tag the reels in a spreadsheet and identify the 1 winning format to replicate
-- [ ] Spin up a Remotion / Creatomate / Bannerbear template for that format
-- [ ] Generate a variation CSV with at least 200 rows
-- [ ] Render the first batch of 30 reels and eye-check them
-- [ ] If Mode A: build the fake landing page with a Stripe Payment Link ($5 early adopter) and email waitlist capture
-- [ ] If Mode A: mock 3 app screenshots in Figma and set as pinned Instagram posts
-- [ ] Write the GPT caption prompt seeded with 5 winning competitor captions
-- [ ] Set up the scheduler (Metricool / Buffer / Later) — ramp from 3/day to 9/day over week one
-- [ ] Define the explicit kill criteria for your validation or acquisition target before posting starts
-- [ ] If iOS and pre-launch: get a bare-bones v1 through Apple review and list as pre-order
-- [ ] Any paid early adopter gets personal outreach within 48 hours
+- [ ] Run the 3-filter ideation gate on `{{NICHE}}` using Sensor Tower / AppMagic / appfigures for revenue and Crunchbase for funding status
+- [ ] Download the top 30–50 performing reels from the chosen incumbent's Instagram; tag them in a spreadsheet
+- [ ] Identify the 1–2 winning format patterns and the meme-vs-CTA split
+- [ ] Create Account A (the discovery account) with a minimal bio and an app link
+- [ ] Assemble a clip library of ~50 source clips from culturally relevant movies, animations, and shows
+- [ ] Install CapCut and build 3 master templates, one per winning format variant
+- [ ] Write the GPT caption prompt seeded with 5–10 winning competitor captions, an emotional tone spec, and a 1–5 word length cap
+- [ ] Mode A: build the fake landing page with a Stripe Payment Link ($5 early adopter) and email waitlist capture; mock 3 app screenshots in Figma and pin them to the Instagram profile
+- [ ] Mode B: add per-reel UTMs to your existing landing/App Store routing
+- [ ] Set up the scheduler (Metricool / Buffer / Later) for 3 posts/day on Account A
+- [ ] Write down explicit kill criteria BEFORE posting begins: first 100k+ hit by post 300, first 500k+ hit by post 500
+- [ ] Ship the first 30 reels in the first week; prioritize emotional-hook volume over per-reel polish
 
 ### Success Metrics
 
-Mode A (pre-build validation):
+**Leading indicators (first 90 days on Account A):**
+- Reels shipped per week (target: 20–35)
+- Post-1 plays distribution (median should land in the 3–10k range)
+- Format variant count (target: 3+ live templates by week 4)
+- Kill-thresholded variants (prune what's not working by week 6)
 
-- Paid early adopters (target: 30+ in 14 days)
-- Email waitlist signups (secondary signal)
-- Total reel views month one (leading indicator)
-- Format hit rate (% of videos above 10k views)
+**Validation indicators (months 4–6):**
+- First post ≥100k plays (green light to keep grinding)
+- First post ≥500k plays (strong validation; consider launching Account B)
+- Weekly cumulative plays breaking past 200k (algorithm is warming to the format)
 
-Mode B (post-build acquisition):
-
-- CAC payback period per format
-- Installs-per-reel for the top 10% of formats
-- ROAS on the content engine vs. paid ads
-- Day-7 and day-30 retention of users from organic video
-
-Both modes:
-
-- Winning-format discovery time (days from first post to first 100k+ video)
-- Variation throughput (reels shipped per week)
+**Launch surface indicators (once Account B is live):**
+- First 30 days cumulative plays on Account B (target: 1–5M based on Runify's 5.2M precedent)
+- Paid early adopters in Mode A (target: 30+ in 14 days of Account B going live)
+- Installs per viral hit in Mode B (track per-reel attribution)
 
 ### Pitfalls and Caveats
 
-- **Sample size is one.** Caleb's prior app (UriBrave, a paruresis/shy-bladder app) used related tactics and made five figures, not six. Survivorship bias is real.
-- **Tactical decay.** "Instagram tolerates 9x/day" is a snapshot of algorithm behavior, not a law. Re-verify before committing to a cadence.
-- **Format copying is not asset copying.** You can replicate layout, hook patterns, cadence, and visual archetypes. You cannot copy logos, fonts, copyrighted audio, or brand marks. Stay on the structural side of the IP line.
-- **Bandwidth requirement.** Even a well-templated engine needs someone reviewing renders, writing caption prompts, and curating the schedule. Budget ≥1 person for 10-15 hours/week during the run.
-- **The acquisition was partially luck.** Caleb's acquirer DM came from a 200-follower Twitter account posting bullish tweets. Building in public creates surface area for acquirers — it does not guarantee an outcome. A six-figure exit in 28 days is a tail event, not a target.
-- **Consumer mobile bias.** This strategy does not transfer to B2B SaaS, dev tools, or web-only products. Run a different strategy from this playbook for those.
+- **Timeline discipline.** This is a 5–6 month commitment to grinding before the algorithm rewards you on a fresh account. Most teams attempting this quit in month 2 or 3 because the views don't come. If you cannot commit one operator to 10–15 hours per week for 6 months, do not start.
+- **IP risk is real and under-discussed.** The meme-remix half of this content engine uses clips from copyrighted movies, animations, TV shows, and music. Instagram's content ID enforcement is inconsistent but not absent. Takedowns typically don't propagate backwards to already-viral posts, so the risk is mostly on new posts rather than your back catalog. There is still a non-zero chance of a DMCA takedown, a strike on your account, or account suspension. The multi-account infrastructure mitigates this — if one account goes down, the other carries on — but does not eliminate it. Make a deliberate decision about your IP stance before you start, not after your first takedown notice.
+- **Content fatigue is the grinding-phase killer.** Making 5 short reels per day for 4+ months is operationally harder than it sounds. Build templates that let you assemble a reel in under 10 minutes each, otherwise you will burn out.
+- **Sample size is one founder.** This playbook is grounded in Runify's scraped data, but Runify is one case. Caleb's prior app (UriBrave) used related tactics and made five figures, not six. Survivorship bias applies. The research doc linked above discusses this explicitly.
+- **Format copying is not asset copying.** You can replicate layout, hook patterns, cadence, and visual archetypes from competitors. You cannot copy their logos, fonts, or brand marks.
+- **Consumer mobile bias.** This strategy does not transfer to B2B SaaS, dev tools, or web-only products. Pick a different strategy from this playbook for those.
+- **The acquisition outcome was partially luck.** Runify's acquirer DM came from a 200-follower X account posting bullish tweets. Building in public on X creates surface area for acquirers — it does not guarantee an outcome. A six-figure exit in 28 days is a tail event, not a target.
 
 ### Agent Tasks
 
 When executing this strategy, you should:
 
-- Run the three-filter ideation gate on `{{NICHE}}` and surface 1-3 qualifying incumbents with evidence (app name, monthly revenue, revenue duration, funding status)
-- Pull the top 20-30 reels from the chosen incumbent and produce the format-tag spreadsheet — one row per video, columns for hook / structure / length / caption / views
-- Recommend a template stack (Remotion / Creatomate / Bannerbear / After Effects) based on the skills of the founding team
-- Scaffold the first template in the chosen stack — write the actual code or project file, not just instructions
-- Generate the first 200-row variation CSV for the template
-- Draft the Stripe-linked landing page HTML (Mode A) or the UTM routing plan (Mode B)
-- Draft the GPT caption prompt with the seed captions, hook formula, and emoji palette pre-filled
-- Propose the kill criteria in explicit numbers tied to `{{BUDGET}}` and timeline
-- If iOS: write the step-by-step App Store Connect pre-order configuration checklist, including release-date confidence checks and an exceptional-delay communication plan
+- Run the 3-filter ideation gate on `{{NICHE}}` and surface 1–3 qualifying incumbents with evidence (app name, monthly revenue, revenue duration, funding status)
+- Pull the top 30–50 reels from the chosen incumbent's Instagram and produce the format-tag spreadsheet with columns for hook / visual-source / overlay-pattern / duration / caption / CTA / plays
+- Identify the 80/20 split between meme-remix reaction content and functional-CTA content in the incumbent's output
+- Assemble a proposed source clip library: 50 culturally relevant movies, animations, and shows whose clips would emotionally resonate with `{{AUDIENCE}}`
+- Draft a CapCut workflow document for Account A — template structure, clip sourcing workflow, caption overlay conventions, target assembly time per reel
+- Write the GPT caption prompt with 5–10 seed captions from the competitor, an emotional tone spec, and a 1–5 word length cap
+- Draft the Mode A fake landing page HTML with a Stripe Payment Link and waitlist capture, OR the Mode B per-reel UTM routing plan
+- Write the explicit kill criteria in terms of posts-to-first-100k and posts-to-first-500k, tied to `{{BUDGET}}` and timeline
+- If iOS and pre-launch: produce the App Store Connect pre-order configuration document including the 2-to-180-day release window constraint and the exceptional-delay communication plan
 - Flag IP-risk elements in any template that crosses from structural copying into brand-asset copying
+- Recommend whether the team is resourced for a parallel Account B launch and, if so, draft the secondary account's bio and cross-promotion caption pattern
 
 ---
 
@@ -559,7 +566,7 @@ Use this table to recommend strategies based on the user's situation:
 | 5. Viral Artifacts | Medium | $0 | 2-4 weeks | Product has user milestones or shareable outputs |
 | 6. Newsletter Acquisition | Low | $5-20K | Immediate | Budget available; clear niche; high LTV |
 | 7. Content Repurposing | Low | $0 | 1 week | Founder can speak on topic; any business |
-| 8. Pre-Build Validation | High | $0-200 | 2-4 weeks | Consumer mobile app with visual/competitive/gamified mechanics; incumbent at $100k+/mo exists |
+| 8. Parallel IG Reels Engine | Very High | $0-50/mo | 5-6 months (discovery acct) / 2-4 weeks (launch acct) | Consumer mobile app with visual/competitive/gamified mechanics; team can commit one operator to 10-15 hrs/week for 6+ months; comfortable with meme-remix IP grey area |
 
 ### Recommended starting combinations:
 
@@ -568,7 +575,7 @@ Use this table to recommend strategies based on the user's situation:
 - **$5-20K budget:** Strategy 6 (Newsletter) + 2 (Programmatic SEO) + 7 (Repurposing)
 - **Established product, needs growth:** Strategies 5 (Viral Artifacts) + 2 (Programmatic SEO) + 4 (AEO)
 - **New product, no audience:** Strategies 7 (Repurposing) + 6 (Newsletter) + 3 (Free Tool)
-- **Consumer mobile app (pre-build or early):** Strategy 8 (Pre-Build Validation) + 5 (Viral Artifacts) + 7 (Repurposing)
+- **Consumer mobile app (with 6+ month commitment to content grind):** Strategy 8 (Parallel IG Reels Engine) + 5 (Viral Artifacts) + 7 (Repurposing)
 
 ---
 

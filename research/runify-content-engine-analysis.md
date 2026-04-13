@@ -141,10 +141,22 @@ None of this makes the underlying playbook unreal. It just means the honest vers
 6. **IP risk.** The playbook leans on uncredited clips from copyrighted movies and animations. Document this honestly, including the observation that Instagram's content ID enforcement is inconsistent but not absent, and that takedowns typically don't propagate to already-viral posts (meaning the risk is mostly to new posts, not back catalog).
 7. **"Pre-build validation" framing.** Demote this from the strategy title to one of two application modes. The primitive is the content engine itself. Validation is downstream.
 
+## Third-account sanity check — no further siblings found
+
+A targeted search for additional Runify-operation accounts (checking `@runify`, `@runifyyy2`, `@runify.ranked`, `@runify.ranks`, `@runify.co`, `@rankedrunning`, and ~20 other plausible variants across Google `site:instagram.com`, X mentions from `@CalebDeannn`, Caleb's personal site, and linked infrastructure) returned nothing. The `@runify*` handles that exist and were indexed are unrelated third-party accounts (Berlin run club, Dutch coaching, Colombian fitness, etc.).
+
+Additional internal signal that points the same direction:
+- `@runifyyy` follows 5 accounts total; `@runifyy.app` follows 1. Both minimal — not consistent with a content-farm network of sibling accounts cross-following each other.
+- Caleb's personal site and Calendly page do not list any further Runify handles.
+- No Linktree / Beacons aggregator on either known bio.
+
+Caveat: a third account could exist if it is (a) very new, (b) private, (c) uses a handle that doesn't contain the "runify" stem, or (d) was deleted before Google indexed it. None of these can be ruled out from open sources. But the load-bearing claim for the playbook — that multi-account parallel posting is the mechanism behind Caleb's cadence — is fully supported by the two confirmed accounts. A hypothetical third wouldn't change the structure of the advice, only the exact cadence numbers.
+
+**Conclusion:** treat `@runifyyy` + `@runifyy.app` as the complete operational footprint for the purposes of the Strategy 8 rewrite.
+
 ## Pending
 
-- Strategy 8 rewrite, on a separate branch, applying the above implications.
-- Open question: are there more sibling Runify accounts beyond `@runifyyy` and `@runifyy.app`? The "second account" label in `@runifyy.app`'s bio implies numbering. Worth a search for `@runifyy.app.2`, `@runify.ranked`, `@runify.ranks`, `@runify.co`, etc. If a third account exists, the day-level cadence numbers may revise further upward.
+- Strategy 8 rewrite, applying the above implications (now in progress on this same branch).
 
 ## References
 
