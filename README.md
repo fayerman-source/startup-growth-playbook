@@ -76,7 +76,7 @@ the agent should switch from content generation to an **implementation handoff**
 
 ## Source
 
-Strategies derived from Greg Isenberg's *Startup Ideas Podcast*.
+Strategies 1-7 are derived from Greg Isenberg's *Startup Ideas Podcast*. Strategy 8 is informed by Caleb Dean's public account of Runify, including the *Superwall Podcast with Joseph Choy*.
 
 ## License
 
