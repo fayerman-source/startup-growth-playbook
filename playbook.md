@@ -238,7 +238,7 @@ The core tactic — write clear, structured, direct answers to real questions �
 ### Success Metrics
 
 - Number of AI citations (Perplexity, ChatGPT, Gemini)
-- AI referral traffic percentage (target: 10%+ within 3 months)
+- AI referral traffic percentage (monitor as a signal; no reliable target — treat citations as a bonus, not an engineered outcome)
 - Ranking for target questions in traditional search
 - Click-through from AI citations to your site
 
@@ -337,7 +337,7 @@ Building an audience takes years of daily content with no guarantee. Instead, bu
 ### Success Metrics
 
 - Cost per subscriber acquired (target: $0.50-$2.00)
-- Open rate maintained post-acquisition (target: within 5% of pre-acquisition)
+- Open rate post-acquisition (model for 20–40% decline in first 3 months; recovery trajectory by month 6)
 - Product signups from newsletter mentions
 - Revenue per subscriber per month
 - Payback period on acquisition cost
@@ -393,7 +393,7 @@ One 30-minute piece of pillar content (podcast, video, voice memo) can be repurp
 
 ### Success Metrics
 
-- Pieces of content produced per pillar piece (target: 20-50)
+- Publishable pieces produced per pillar piece (realistic target: 10–15 after editing; total drafts generated is a vanity metric)
 - Total impressions across platforms per week
 - Engagement rate per platform
 - Follower/subscriber growth rate
@@ -674,11 +674,9 @@ Most pages include `og:image` but skip `og:image:alt`. It's a cheap accessibilit
 ## Appendix: Key Quotes and References
 
 - "Distribution first, product second. Always." — Greg Isenberg
-- "Building an MCP server in 2026 is like building for mobile in 2010."
 - "You can vibe code a free tool in a day, ship it by lunch, and it markets itself forever."
-- "AEO in 2026 is where SEO was in 2010 — first movers will own these niches for years."
 - "Ask what does my user want to brag about, then make that thing beautiful and shareable."
-- Peter Levels example: $3M+ revenue, zero employees, 750K+ followers, great SEO. AI referrals jumped from 4% to 20% in one month.
+- Peter Levels example: $3M+ revenue, zero employees, 750K+ followers, great SEO. AI referrals jumped from 4% to 20% in one month. (Single anecdote from an unusually prominent creator — not a benchmark.)
 - "Pick two strategies. Start this week. Don't just vibe code."
 
 ---
