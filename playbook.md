@@ -51,7 +51,15 @@ You are a marketing strategist and executor. This playbook contains 8 distributi
 
 ### Why it works
 
-Building an MCP (Model Context Protocol) server in 2026 is like building for mobile in 2010. When a user asks an AI assistant a question, the AI discovers your MCP server, returns your product's data, and the user gets value — zero customer acquisition cost. The AI assistant becomes your 24/7 sales team. Early movers in fintech are seeing 150+ installations in 30 days with $0 ad spend.
+MCP (Model Context Protocol) is a standard that lets AI assistants call external tools and data sources. If you publish an MCP server that answers a question your target user asks their AI assistant, and that user has installed your server, the AI can surface your product's data in its response — turning a query into a touchpoint with zero paid acquisition cost.
+
+**Important mechanics to understand before you build:**
+
+- MCP servers are not auto-discovered. Users must explicitly install your server in their AI client (Claude Desktop, Cursor, etc.). Distribution is the bottleneck, not the build.
+- The MCP ecosystem is early (2025–2026). Registry traffic, install volumes, and conversion benchmarks are not yet publicly documented at scale. Treat any specific numbers you hear (installations per month, CAC figures) as anecdote until you can verify the source.
+- This strategy compounds only if users actively query your niche in an MCP-capable client. It is a real channel for developer tools, data products, and API-first SaaS. It is speculative for consumer apps and B2C.
+
+The long-term thesis — that AI clients become a meaningful distribution surface as adoption grows — is directionally correct. The near-term ROI is genuinely uncertain. Build for learning, not for scale, in 2026.
 
 ### Implementation Steps
 
@@ -197,7 +205,15 @@ When executing this strategy, you should:
 
 ### Why it works
 
-AEO in 2026 is where SEO was in 2010. AI referrals are jumping from 4% to 20%+ of traffic in months. Zero-click searches are growing. The goal: create content so well-structured and authoritative that ChatGPT, Perplexity, and other AI assistants cite you as the source. First movers will own these niches for years.
+When users ask AI assistants questions — ChatGPT, Perplexity, Gemini — those assistants cite sources. If your content is the clearest, most structured answer to a question your audience is asking, you become the cited source, and a fraction of users click through. That's a real acquisition channel with no ad spend.
+
+**Honest framing on what's known vs. hyped:**
+
+- "AEO is where SEO was in 2010" is a podcast talking point, not a measured claim. First-mover advantage in AI citations may be real, but no one has demonstrated durable citation ownership the way domain authority works in search. AI systems update their training data and retrieval logic; what ranks today may not rank in six months.
+- The "4% to 20% AI referral traffic" data point comes from one public creator (Peter Levels) who has unusually high brand recognition. It is a single anecdote, not a benchmark. Your results will differ.
+- Citation mechanics vary significantly by platform: Perplexity is retrieval-based (your content can appear quickly if it ranks); ChatGPT's browsing mode is inconsistent; Gemini's behavior is opaque. There is no unified "AEO ranking signal" the way PageRank works for Google.
+
+The core tactic — write clear, structured, direct answers to real questions — is sound and overlaps with good SEO practice. Do it because it makes your content genuinely useful, and treat AI citations as a bonus you can monitor but not reliably engineer.
 
 ### Implementation Steps
 
@@ -222,7 +238,7 @@ AEO in 2026 is where SEO was in 2010. AI referrals are jumping from 4% to 20%+ o
 ### Success Metrics
 
 - Number of AI citations (Perplexity, ChatGPT, Gemini)
-- AI referral traffic percentage (target: 10%+ within 3 months)
+- AI referral traffic percentage (monitor as a signal; no reliable target — treat citations as a bonus, not an engineered outcome)
 - Ranking for target questions in traditional search
 - Click-through from AI citations to your site
 
@@ -294,7 +310,9 @@ When executing this strategy, you should:
 
 ### Why it works
 
-Building an audience takes years of daily content with no guarantee. Instead, buy a 5,000-50,000 subscriber newsletter for $5,000-$20,000. You inherit trust from day one, plug in your product immediately, and own a direct channel that can't be suppressed by algorithm changes. Many small newsletter owners make $0-500/month and would be thrilled by a fair acquisition offer.
+Building an audience takes years of daily content with no guarantee. Instead, buy a 5,000-50,000 subscriber newsletter for $5,000-$20,000. You own a direct channel that can't be suppressed by algorithm changes, and you skip the cold-start problem. Many small newsletter owners make $0-500/month and would be thrilled by a fair acquisition offer.
+
+> **Reality check:** "Inherit trust from day one" is the pitch, not always the reality. Newsletter audiences follow the *person*, not the publication. Post-acquisition open rates typically drop 20–40% in the first 3 months, and subscriber churn accelerates if the voice changes noticeably. This doesn't kill the strategy — the economics can still work — but you should model the ROI with a realistic open rate decline baked in, not with pre-acquisition numbers. A soft handoff (the original owner writing one final edition introducing you) and maintaining the original voice for the first 60 days both help. The market of owners willing to sell at fair prices is also smaller than it appears; most who respond are either too expensive or have inflated subscriber counts.
 
 ### Implementation Steps
 
@@ -319,7 +337,7 @@ Building an audience takes years of daily content with no guarantee. Instead, bu
 ### Success Metrics
 
 - Cost per subscriber acquired (target: $0.50-$2.00)
-- Open rate maintained post-acquisition (target: within 5% of pre-acquisition)
+- Open rate post-acquisition (model for 20–40% decline in first 3 months; recovery trajectory by month 6)
 - Product signups from newsletter mentions
 - Revenue per subscriber per month
 - Payback period on acquisition cost
@@ -344,7 +362,9 @@ When executing this strategy, you should:
 
 ### Why it works
 
-One 30-minute piece of pillar content (podcast, video, voice memo) becomes 50+ pieces across channels via AI repurposing: tweet threads, LinkedIn posts, short-form videos, newsletters, blog posts, quote graphics, email sequences. In 3 months of weekly execution, you'll have more content than competitors who aren't doing this. With for-you-page algorithms, you don't need followers — you need shots on net.
+One 30-minute piece of pillar content (podcast, video, voice memo) can be repurposed into many formats across channels via AI: tweet threads, LinkedIn posts, short-form video scripts, newsletters, blog posts, quote graphics, email sequences. This compresses what used to take a content team into a solo founder workflow. With for-you-page algorithms, you don't need followers — you need shots on net.
+
+> **Reality check:** "50+ pieces" is a volume metric, not a quality metric. An AI pass over a transcript produces 50 drafts, not 50 pieces of content — the editing pass is where the actual work lives, and good editing takes longer than the generation step. The practical throughput for a solo founder who edits seriously is closer to 10–15 publishable pieces per pillar, not 50. Optimizing for count leads to flooding your channels with low-signal content, which suppresses reach on most platforms. Pick fewer formats and publish them well rather than shipping everything the AI produces.
 
 ### Implementation Steps
 
@@ -373,7 +393,7 @@ One 30-minute piece of pillar content (podcast, video, voice memo) becomes 50+ p
 
 ### Success Metrics
 
-- Pieces of content produced per pillar piece (target: 20-50)
+- Publishable pieces produced per pillar piece (realistic target: 10–15 after editing; total drafts generated is a vanity metric)
 - Total impressions across platforms per week
 - Engagement rate per platform
 - Follower/subscriber growth rate
@@ -654,11 +674,9 @@ Most pages include `og:image` but skip `og:image:alt`. It's a cheap accessibilit
 ## Appendix: Key Quotes and References
 
 - "Distribution first, product second. Always." — Greg Isenberg
-- "Building an MCP server in 2026 is like building for mobile in 2010."
 - "You can vibe code a free tool in a day, ship it by lunch, and it markets itself forever."
-- "AEO in 2026 is where SEO was in 2010 — first movers will own these niches for years."
 - "Ask what does my user want to brag about, then make that thing beautiful and shareable."
-- Peter Levels example: $3M+ revenue, zero employees, 750K+ followers, great SEO. AI referrals jumped from 4% to 20% in one month.
+- Peter Levels example: $3M+ revenue, zero employees, 750K+ followers, great SEO. AI referrals jumped from 4% to 20% in one month. (Single anecdote from an unusually prominent creator — not a benchmark.)
 - "Pick two strategies. Start this week. Don't just vibe code."
 
 ---
