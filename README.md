@@ -6,6 +6,8 @@
 
 Distribution-first marketing strategies for AI-era startups. Clone into any project directory and let an LLM agent auto-generate and execute a marketing plan from the codebase.
 
+*Last reviewed: 2026-10-08. Platforms, registries and AI directories change fast, so check anything time-sensitive before you act on it.*
+
 ## Quick Start
 
 ```bash
@@ -19,7 +21,7 @@ Then tell your LLM agent:
 
 The agent will:
 1. **Discover**: scan your codebase to understand the product, niche, and audience
-2. **Select**: pick the best 2-3 strategies from the playbook
+2. **Select**: check the product's stage, then pick the strategies that fit it (usually 2-3; fewer, or none yet, before product-market fit)
 3. **Plan**: generate a tailored `plan.md` with real tasks and metrics
 4. **Execute**: produce marketing artifacts (content, SEO pages, outreach, etc.)
 5. **Handoff**: when the next step requires app-code changes or live rollout, generate an implementation-ready handoff instead of endlessly expanding docs
@@ -79,6 +81,8 @@ the agent should switch from content generation to an **implementation handoff**
 ## Source
 
 Strategies 1-7 are derived from Greg Isenberg's X post and *Startup Ideas Podcast* episode of 2026-03-30, ["Stop Vibe Coding. Start Getting Customers."](https://x.com/gregisenberg/status/2038706332119797894). Strategy 8 is informed by Caleb Dean's public account of Runify, including the *Superwall Podcast with Joseph Choy*. Strategy 9 draws on Isenberg's [2026-09-24 episode](https://podcasts.apple.com/us/podcast/muse-ai-connectors-the-next-app-store-moment/id1593424985?i=1000791511740) plus general customer-development practice. Strategy 10 is based on Isenberg's X threads of [2026-10-01](https://x.com/gregisenberg/status/2105454208040206773) and [2026-09-18](https://x.com/gregisenberg/status/2101097826730017111).
+
+This is an independent project. It is not affiliated with, or endorsed by, Greg Isenberg or Caleb Dean; it summarizes their public material and links to it.
 
 ## License
 

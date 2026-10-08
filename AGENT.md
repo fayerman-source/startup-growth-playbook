@@ -60,7 +60,7 @@ What the stage changes:
 
 ### Step 2: Select the strategies
 
-Using the **Prioritization Matrix**, the stage and what you learned in Phase 1, select 2-3 strategies (fewer for Pre-PMF). Use these heuristics:
+Using the **Prioritization Matrix**, the stage and what you learned in Phase 1, select the strategies that fit: usually 2-3 for Early traction or Scale, one or two for Pre-PMF, or none ("Not yet") if the Stage Gate says so. Use these heuristics:
 
 | Signal from codebase | Strategy to prioritize |
 |---|---|

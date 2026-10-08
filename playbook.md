@@ -28,7 +28,7 @@ You are a marketing strategist and executor. This playbook contains 10 distribut
 ### How to use this playbook:
 
 1. Discover the variables above from the codebase first, then ask the user only for anything still missing
-2. Classify the **stage** (see the Stage Gate below), then consult the **Prioritization Matrix** to recommend 2-3 strategies based on the user's situation
+2. Classify the **stage** (see the Stage Gate below), then consult the **Prioritization Matrix** to recommend the strategies that fit: usually 2-3, fewer before product-market fit, or "Not yet" if nothing fits
 3. For each selected strategy, walk through the **Implementation Steps** and **This Week Checklist**
 4. Execute the **Agent Tasks** that can be completed inside `marketing/` — these are things you can do directly (draft content, generate ideas, write copy, build templates)
 5. If the next highest-value work requires product code changes, deployment access, analytics checks, or other external systems, stop generating more collateral and produce an implementation handoff instead
@@ -748,10 +748,10 @@ The combinations below assume Early traction or Scale unless they say otherwise.
 
 ## Weekly Execution Calendar (4-Week Sprint)
 
-This assumes the user has selected 2-3 strategies. Adapt based on their choices.
+This assumes 2-3 selected strategies. With one strategy (common before product-market fit), give its checklist the whole week and skip the slots for B and C.
 
 ### Week 1: Foundation
-- **Mon-Tue:** Collect `{{PRODUCT}}`, `{{NICHE}}`, `{{AUDIENCE}}` details. Select 2-3 strategies from the matrix.
+- **Mon-Tue:** Collect `{{PRODUCT}}`, `{{NICHE}}`, `{{AUDIENCE}}` details. Classify the stage, then select strategies from the matrix (see the Stage Gate for how many).
 - **Wed-Thu:** Execute "This Week Checklist" for Strategy A (primary)
 - **Fri:** Record first pillar content piece (if Strategy 7 selected). Begin Strategy B checklist.
 
