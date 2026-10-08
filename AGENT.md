@@ -12,6 +12,13 @@ Scan the codebase to understand what this startup builds. Read these files (if t
 4. `../.env.example` — what services/APIs are integrated
 5. `../CLAUDE.md` or `../AGENT.md` — project context the developer has written
 6. Any `../docs/` directory
+7. Existing distribution, marketing or strategy documents (for example `../docs/*distribution*`, `../docs/*marketing*`, `../docs/*strategy*`, `../docs/*brief*`, a roadmap or a growth plan)
+
+**Existing decisions are binding.** If the repo already records a distribution or strategy decision, treat it as a constraint. That includes chosen channels, rejected channels, budget limits and stop rules (conditions under which a channel or effort should end). Do not select a strategy that contradicts one. If the playbook's recommendation conflicts with a recorded decision, follow the decision and log the conflict in `plan.md` under Notes, with the file it came from. Do not override it.
+
+**Monorepos.** If the root README is thin or the repo has `apps/*`, `packages/*`, `services/*` or similar directories, read the README and manifest in each one too, and work out which part is the product users see. Say in `plan.md` which app or package the plan is about.
+
+**Large files.** Skip or skim files over about 200 KB (lockfiles, generated output, data dumps, bundled assets). Read the head, a table of contents or a search hit instead of the whole file.
 
 From these, extract:
 
