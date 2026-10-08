@@ -31,10 +31,10 @@ No manual setup. No forms to fill in. The protocol bootstraps from your code.
 | File | Purpose |
 |---|---|
 | `AGENT.md` | Self-bootstrapping protocol — the agent reads this first |
-| `playbook.md` | 8 distribution strategies with implementation steps and agent tasks |
+| `playbook.md` | 10 distribution strategies with implementation steps and agent tasks |
 | `startup-template.md` | Plan structure (used by the agent, not by you) |
 
-## The 8 Strategies
+## The 10 Strategies
 
 1. **MCP Servers** — let AI assistants sell for you
 2. **Programmatic SEO** — generate thousands of keyword-targeted pages
@@ -44,6 +44,8 @@ No manual setup. No forms to fill in. The protocol bootstraps from your code.
 6. **Newsletter Acquisition** — buy an audience for $5-20K instead of building from zero
 7. **Content Repurposing** — one pillar piece becomes 50+ across channels
 8. **Parallel Instagram Reels Content Engine** — high-volume meme-remix short-form video across parallel Instagram accounts for consumer mobile apps (5-6 month grind; credit: Caleb Dean / Runify, via [Superwall Podcast](https://www.youtube.com/watch?v=yw5iIgO4PbY); primary-source analysis in [research/runify-content-engine-analysis.md](research/runify-content-engine-analysis.md))
+9. **First Users (Pre-PMF)** — before product-market fit: one customer type, interviews, hand-onboarding, see who stays
+10. **AI Directory Listing** — get a single-task tool listed early in a new AI platform's directory (experimental; platform risk)
 
 ## Output Structure
 

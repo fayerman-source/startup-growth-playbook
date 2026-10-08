@@ -41,6 +41,8 @@ Read `playbook.md` in this directory. Using the **Prioritization Matrix** and wh
 | No existing audience, budget available | **6. Newsletter Acquisition** |
 | Founder can speak on the topic (podcast/video exists) | **7. Content Repurposing** |
 | Native iOS/Android consumer app with visual/competitive/gamified mechanics (social, leaderboards, habit tracking, etc.) | **8. Parallel IG Reels Engine** |
+| No users who stay without the founder pushing | **9. First Users (Pre-PMF)** |
+| Single-task utility an AI assistant could invoke, and platform dependence is acceptable | **10. AI Directory Listing** |
 
 Default starting set if nothing stands out: **Strategy 3 (Free Tool) + Strategy 4 (AEO) + Strategy 7 (Content Repurposing)**.
 
