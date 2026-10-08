@@ -32,7 +32,7 @@ From these, extract:
 | **Product URL** | Deployed URL if any (README, manifest homepage field) |
 | **One-line pitch** | First sentence of README or meta description |
 
-If you can't determine a field from the codebase, leave it as `[unknown — ask user]` and continue. Do not block on missing info.
+If you can't determine a field from the codebase, write it as an explicit note in the form `Unknown: <what is missing and how to find out>` and continue. Do not block on missing info. An `Unknown:` note is an allowed value; a `{{VARIABLE}}` or empty placeholder is not.
 
 ## Phase 2: Select Strategies
 
@@ -86,6 +86,9 @@ Write `plan.md` in this directory using `startup-template.md` as the structure. 
 - Pull the **This Week Checklist** items from `playbook.md` into the execution status section
 - Pull the relevant **Success Metrics** into the metrics tracker
 - Tailor everything to this specific product — no placeholders, no generic language
+- Fill in the Stage row from Phase 2. Mark any checklist item that does not apply to this product or stage as `N/A — <reason>` instead of deleting it or forcing it
+- If the stage gate says nothing fits yet, write the outcome as `Not yet — recommended next step is <X>` in the plan instead of inventing strategies
+- Add activation and retention metrics next to the acquisition metrics, even for products that are not launched or not paid
 
 Commit `plan.md` when done.
 
@@ -139,7 +142,7 @@ Do not mark anything as published, submitted, indexed, deployed, or verified unl
 
 ## Rules
 
-- Never leave `{{VARIABLES}}` or placeholder text in outputs — everything must be specific to this product
+- Never leave `{{VARIABLES}}` or placeholder text in outputs — everything must be specific to this product. The one exception is a field you could not determine, which you write as an explicit `Unknown: …` note
 - Content must sound human — add specifics, examples, opinions. Flag anything that feels like slop.
 - If the codebase doesn't give you enough info to execute a task, note what's missing in `plan.md` under Notes and move on
 - Prefer phase-boundary commits over frequent partial commits
