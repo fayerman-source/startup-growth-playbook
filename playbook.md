@@ -66,7 +66,7 @@ The long-term thesis — that AI clients become a meaningful distribution surfac
 
 1. Identify what question your product answers (e.g., "What's the best CRM for dentists?" → your product is the answer)
 2. Build an MCP server that returns that data — this can be vibe-coded in 24 hours or less
-3. Publish to MCP registries: Smithery, MCPT, Open Tools
+3. Publish to MCP registries: Smithery, MCPT, Open Tools. The named registries change fast (they may rename, merge or close), so verify which are active before using them. This list is as of 2026-10-08 and was not independently verified.
 4. Monitor installations and usage
 5. Iterate on the data quality and response format based on how AI assistants use it
 
@@ -106,7 +106,9 @@ When executing this strategy, you should:
 
 ### Why it works
 
-You create thousands of keyword-targeted pages using a repeatable pattern (e.g., "Best [product type] for [niche]" or "[service] in [city]"). Each page gets modest traffic (even 30 visits/month), but at 10,000 pages that's 300,000 monthly visitors. At 2% conversion and $10 each, that's $60,000/month from pages you built once.
+You create thousands of keyword-targeted pages using a repeatable pattern (e.g., "Best [product type] for [niche]" or "[service] in [city]"). Each page gets modest traffic (even 30 visits/month), but at 10,000 pages that's 300,000 monthly visitors. At 2% conversion and $10 each, that's $60,000/month from pages you built once. Treat this arithmetic as an illustration of how the math compounds, not a benchmark. The 30 visits per page, the 2% conversion and the $10 value are assumptions, and most page sets will not reach them.
+
+> **Reality check:** Google's spam policies prohibit "scaled content abuse": producing many pages mainly to rank in search rather than to help people, whatever the production method (AI, humans or a mix). Thousands of near-identical pages built from a template and a keyword list can fall under it, and the penalty can hit the whole site, not just those pages. Each page needs information a visitor can actually use, such as real data, a real answer or something specific to that city or product. Read the current policy before scaling: [Google spam policies](https://developers.google.com/search/docs/essentials/spam-policies#scaled-content). Start with the 100-page test and see whether the pages get indexed and shown before going further.
 
 ### Implementation Steps
 
@@ -162,9 +164,9 @@ A free tool (grader, analyzer, calculator, checker) gives the user instant value
 
 1. Identify what your user wants to measure, score, or analyze about themselves or their business
 2. Build a free tool that gives them a score/result (e.g., "Your site scores 43/100")
-3. Gate the full results behind an email capture
+3. Optional: gate the full results behind an email capture. Skip this if the product is free or has no paid tier to lead to; an ungated result is often a better first experience
 4. Make the result shareable (social proof + backlinks)
-5. Add a clear upsell: "Want to fix these issues? Here's our paid product."
+5. Optional: add a clear upsell ("Want to fix these issues? Here's our paid product."). Only if there is a paid product; otherwise point to the next useful step in the product
 6. Promote the tool across your channels
 7. Build one free tool per month — create a "free tool calendar"
 
@@ -173,7 +175,7 @@ A free tool (grader, analyzer, calculator, checker) gives the user instant value
 - [ ] Brainstorm 10 free tool ideas for `{{PRODUCT}}`
 - [ ] Pick the one with highest viral potential (users want to share their score)
 - [ ] Build the MVP — input form, processing, result page
-- [ ] Add email capture gate
+- [ ] Add email capture gate (optional; N/A for free products or products without a paid tier)
 - [ ] Add share button with pre-filled social post
 - [ ] Ship it and announce on your existing channels
 - [ ] Track signups and shares
@@ -192,9 +194,9 @@ When executing this strategy, you should:
 
 - Generate 10 free tool concepts for `{{PRODUCT}}` targeting `{{AUDIENCE}}`
 - For the top concept, draft the user flow (input → processing → result → share → upsell)
-- Write the copy for the result page including the upsell CTA
+- Write the copy for the result page, including the upsell CTA if the product has a paid tier
 - Draft social post templates users can share with their results
-- Write the email capture copy and follow-up sequence (3 emails)
+- If an email gate is used, write the email capture copy and follow-up sequence (3 emails)
 
 ---
 
@@ -218,6 +220,7 @@ The core tactic — write clear, structured, direct answers to real questions �
 
 ### Implementation Steps
 
+0. Before writing anything, check whether the site already has FAQ content or FAQ/HowTo schema (search the codebase for `FAQPage`, `application/ld+json` and existing FAQ pages). Extend or fix what exists instead of duplicating it. Verify any statement about how the product itself behaves (features, limits, pricing, supported platforms) against the code or the live product, not against the README or your assumptions.
 1. Google the top 20 questions your customer asks
 2. Write the definitive, structured answer for each — clear, direct, citation-worthy (not 3,000-word fluff)
 3. Use FAQ format with proper schema markup
@@ -307,11 +310,11 @@ When executing this strategy, you should:
 
 **Priority:** Medium-High (if budget allows)
 **Time to first result:** Immediate (day 1 after acquisition)
-**Best for:** Any business with a clear niche and $5-20K budget
+**Best for:** Any business with a clear niche and a budget in the range of $5-20K (indicative and unsourced; real prices vary widely)
 
 ### Why it works
 
-Building an audience takes years of daily content with no guarantee. Instead, buy a 5,000-50,000 subscriber newsletter for $5,000-$20,000. You own a direct channel that can't be suppressed by algorithm changes, and you skip the cold-start problem. Many small newsletter owners make $0-500/month and would be thrilled by a fair acquisition offer.
+Building an audience takes years of daily content with no guarantee. Instead, buy a 5,000-50,000 subscriber newsletter. The $5,000-$20,000 price range here is indicative and unsourced; get real quotes and do not treat it as a market rate. You own a direct channel that can't be suppressed by algorithm changes, and you skip the cold-start problem. Many small newsletter owners make $0-500/month and would be thrilled by a fair acquisition offer.
 
 > **Reality check:** "Inherit trust from day one" is the pitch, not always the reality. Newsletter audiences follow the *person*, not the publication. Post-acquisition open rates typically drop 20–40% in the first 3 months, and subscriber churn accelerates if the voice changes noticeably. This doesn't kill the strategy — the economics can still work — but you should model the ROI with a realistic open rate decline baked in, not with pre-acquisition numbers. A soft handoff (the original owner writing one final edition introducing you) and maintaining the original voice for the first 60 days both help. The market of owners willing to sell at fair prices is also smaller than it appears; most who respond are either too expensive or have inflated subscriber counts.
 
@@ -321,7 +324,7 @@ Building an audience takes years of daily content with no guarantee. Instead, bu
 2. Filter for 5,000-50,000 subscribers in your target niche
 3. DM the owner: "Have you ever thought about selling?"
 4. Evaluate: open rates, subscriber quality, engagement, growth trend
-5. Make a fair offer ($5K-$20K depending on size and quality)
+5. Make a fair offer (the $5K-$20K range is indicative and unsourced; price from the numbers you verify)
 6. Transition ownership, maintain the voice and cadence initially
 7. Gradually introduce your product to the audience
 8. Repeat across niches if LTV justifies it
