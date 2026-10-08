@@ -598,7 +598,7 @@ Before product-market fit, the question to answer is whether a specific group of
 2. Talk to 5–10 people who have the problem. Ask about the last time it happened: what they did, what it cost them, what they tried. Do not pitch. Do not ask whether they would use your product.
 3. Recruit through one group that already trusts you (a community you belong to, a customer list, a club, a cohort). Ask the organiser first and follow the group's rules. Never drop links into communities you are not part of.
 4. Onboard each person by hand: a call, a message thread or a shared screen. Watch where they get stuck and write it down.
-5. After a few weeks, stop nudging. No reminder emails, no personal check-ins. See who comes back on their own.
+5. After a few weeks, stop your personal nudges: no check-in messages or calls from you. Keep the product's normal automated reminders running if they are part of how it works. See who comes back on their own.
 6. Ask the users who are happy and still active for one introduction each, to someone else of the same customer type.
 
 ### This Week Checklist

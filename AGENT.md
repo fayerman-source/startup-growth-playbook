@@ -10,7 +10,7 @@ Scan the codebase to understand what this startup builds. Read these files (if t
 2. `../package.json`, `../pyproject.toml`, `../Cargo.toml`, or equivalent manifest
 3. `../index.html`, `../src/app/*`, `../src/pages/*` — landing page or main UI
 4. `../.env.example` — what services/APIs are integrated
-5. `../CLAUDE.md` or `../AGENT.md` — project context the developer has written
+5. `../AGENTS.md`, `../CLAUDE.md` or `../AGENT.md`, plus any of these in subdirectories that apply to the files you will touch: project context and rules the developer has written
 6. Any `../docs/` directory
 7. Existing distribution, marketing or strategy documents (for example `../docs/*distribution*`, `../docs/*marketing*`, `../docs/*strategy*`, `../docs/*brief*`, a roadmap or a growth plan)
 
@@ -148,7 +148,7 @@ Do not mark anything as published, submitted, indexed, deployed, or verified unl
 - Content must sound human — add specifics, examples, opinions. Flag anything that feels like slop.
 - If the codebase doesn't give you enough info to execute a task, note what's missing in `plan.md` under Notes and move on
 - Prefer phase-boundary commits over frequent partial commits
-- Commit rules: the host repo's own rules come first. If the repo's `CLAUDE.md`, `AGENT.md`, `CONTRIBUTING.md` or similar require branches, pull requests, a commit message format, or say to commit only when asked, follow them. If they say nothing, commit at phase boundaries as described above. If following them would mean not committing, write the files and tell the user instead
+- Commit rules: the host repo's own rules come first. If the repo's `AGENTS.md`, `CLAUDE.md`, `AGENT.md`, `CONTRIBUTING.md` or similar require branches, pull requests, a commit message format, or say to commit only when asked, follow them. If they say nothing, commit at phase boundaries as described above. If following them would mean not committing, write the files and tell the user instead
 - If remaining work requires app-code changes, deployment access, or external systems, stop generating new collateral and produce a handoff instead
 - Prefer quality over breadth: ship a few strong artifacts rather than many weak ones
 - Do not modify any files outside the `marketing/` directory unless the user explicitly asks for implementation outside it
