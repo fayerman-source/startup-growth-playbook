@@ -90,7 +90,7 @@ Write `plan.md` in this directory using `startup-template.md` as the structure. 
 - If the stage gate says nothing fits yet, write the outcome as `Not yet — recommended next step is <X>` in the plan instead of inventing strategies
 - Add activation and retention metrics next to the acquisition metrics, even for products that are not launched or not paid
 
-Commit `plan.md` when done.
+Commit `plan.md` when done, following the commit rules below.
 
 ## Phase 4: Execute Marketing-Only Deliverables
 
@@ -106,9 +106,11 @@ marketing/
   artifacts/  — viral artifact designs, share copy, image specs
 ```
 
+When a strategy produces SEO or AEO pages, check them against the **Technical SEO Baseline** in `playbook.md` before calling them ready.
+
 Work through one strategy at a time. After completing each strategy's tasks:
 1. Update the checklist in `plan.md`
-2. Commit the outputs at a phase boundary
+2. Commit the outputs at a phase boundary, following the commit rules below
 3. Move to the next strategy
 
 ## Phase 5: Product Implementation Handoff
@@ -146,6 +148,7 @@ Do not mark anything as published, submitted, indexed, deployed, or verified unl
 - Content must sound human — add specifics, examples, opinions. Flag anything that feels like slop.
 - If the codebase doesn't give you enough info to execute a task, note what's missing in `plan.md` under Notes and move on
 - Prefer phase-boundary commits over frequent partial commits
+- Commit rules: the host repo's own rules come first. If the repo's `CLAUDE.md`, `AGENT.md`, `CONTRIBUTING.md` or similar require branches, pull requests, a commit message format, or say to commit only when asked, follow them. If they say nothing, commit at phase boundaries as described above. If following them would mean not committing, write the files and tell the user instead
 - If remaining work requires app-code changes, deployment access, or external systems, stop generating new collateral and produce a handoff instead
 - Prefer quality over breadth: ship a few strong artifacts rather than many weak ones
 - Do not modify any files outside the `marketing/` directory unless the user explicitly asks for implementation outside it
