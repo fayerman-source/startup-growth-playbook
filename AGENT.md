@@ -29,7 +29,31 @@ If you can't determine a field from the codebase, leave it as `[unknown — ask 
 
 ## Phase 2: Select Strategies
 
-Read `playbook.md` in this directory. Using the **Prioritization Matrix** and what you learned in Phase 1, select 2-3 strategies. Use these heuristics:
+Read `playbook.md` in this directory.
+
+### Step 1: Classify the company stage
+
+Before selecting strategies, decide which stage the product is in. Scale tactics aimed at a product nobody keeps waste effort and teach nothing.
+
+| Stage | Definition |
+|---|---|
+| **Pre-PMF** | No users are retained without the founder pushing them |
+| **Early traction** | Some users are retained, but acquisition is not yet repeatable |
+| **Scale** | There is a repeatable acquisition and retention signal |
+
+How to infer it from the repo and docs: look for user or retention numbers, analytics notes, a changelog, a waitlist or invite-only language, "beta" or "alpha" labels, a billing or paid-plan implementation with real customers, testimonials, support logs, and any founder notes on who uses the product and how they were found. Onboarding scripts or hand-written welcome messages usually mean the founder is still doing the pushing. A pricing page or a live checkout alone does not prove retained users.
+
+If the evidence is unclear, ask the user one direct question: "Do any users come back week after week without you messaging them?" If you cannot ask, assume the earlier stage, and record the stage and your reasoning in `plan.md`.
+
+What the stage changes:
+
+- **Pre-PMF:** default to **Strategy 9 (First Users)** plus at most one cheap strategy from 3, 5 or 7. Strategies 1, 2, 6 and 8 are usually premature before early traction. Do not select them unless the user gives a specific reason, and record the reason in `plan.md` Notes.
+- **Early traction and Scale:** use Step 2 as written below. Strategy 9 is optional.
+- If the honest answer is that no strategy fits yet, say so. "Not yet" with a recommended next step is a valid output (see `startup-template.md`).
+
+### Step 2: Select the strategies
+
+Using the **Prioritization Matrix**, the stage and what you learned in Phase 1, select 2-3 strategies (fewer for Pre-PMF). Use these heuristics:
 
 | Signal from codebase | Strategy to prioritize |
 |---|---|
@@ -44,7 +68,7 @@ Read `playbook.md` in this directory. Using the **Prioritization Matrix** and wh
 | No users who stay without the founder pushing | **9. First Users (Pre-PMF)** |
 | Single-task utility an AI assistant could invoke, and platform dependence is acceptable | **10. AI Directory Listing** |
 
-Default starting set if nothing stands out: **Strategy 3 (Free Tool) + Strategy 4 (AEO) + Strategy 7 (Content Repurposing)**.
+Default starting set if nothing stands out (Early traction or Scale): **Strategy 3 (Free Tool) + Strategy 4 (AEO) + Strategy 7 (Content Repurposing)**.
 
 Note: Strategy 8 is niche-specific — only surface it when the product is a consumer mobile app, there is at least one non-VC-funded incumbent in the category sustaining $100k+/month for 12+ months, and the team can realistically commit one operator to a 5-6 month content grind. If those gates aren't cleared, skip it even when the product type matches.
 

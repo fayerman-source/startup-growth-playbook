@@ -21,11 +21,12 @@ You are a marketing strategist and executor. This playbook contains 10 distribut
 | `{{AUDIENCE}}` | Who the ideal customer is |
 | `{{BUDGET}}` | Monthly marketing budget (including potential acquisitions) |
 | `{{CURRENT_CHANNELS}}` | Existing distribution (social followers, email list, SEO authority, etc.) |
+| `{{STAGE}}` | Pre-PMF (no users retained without the founder pushing), Early traction (some retained users, acquisition not yet repeatable) or Scale (repeatable acquisition and retention signal) |
 
 ### How to use this playbook:
 
 1. Discover the variables above from the codebase first, then ask the user only for anything still missing
-2. Consult the **Prioritization Matrix** (Section 9) to recommend 2-3 strategies based on the user's situation
+2. Classify the **stage** (see the Stage Gate below), then consult the **Prioritization Matrix** to recommend 2-3 strategies based on the user's situation
 3. For each selected strategy, walk through the **Implementation Steps** and **This Week Checklist**
 4. Execute the **Agent Tasks** that can be completed inside `marketing/` — these are things you can do directly (draft content, generate ideas, write copy, build templates)
 5. If the next highest-value work requires product code changes, deployment access, analytics checks, or other external systems, stop generating more collateral and produce an implementation handoff instead
@@ -692,32 +693,50 @@ When executing this strategy, you should:
 
 ---
 
+## Stage Gate
+
+Classify the stage before choosing strategies. Infer it from the repo and docs (retention or user numbers, analytics notes, waitlist or beta language, real paying customers); if it is unclear, ask the user whether any users come back week after week without the founder messaging them.
+
+| Stage | Definition | What to do |
+|---|---|---|
+| **Pre-PMF** | No users retained without the founder pushing | Default to Strategy 9 (First Users) plus at most one cheap strategy (3, 5 or 7) |
+| **Early traction** | Some retained users, acquisition not yet repeatable | Use the matrix as written |
+| **Scale** | A repeatable acquisition and retention signal | Use the matrix as written |
+
+Strategies 1, 2, 6 and 8 are usually premature before early traction: they spend effort or money on reach for a product whose retention is not yet shown. Select one of them while Pre-PMF only when the user gives a specific reason, and write the reason down.
+
+"Not yet" is a valid result. If the stage is Pre-PMF and even Strategy 9 cannot start (for example, there is no product anyone can try), say that and name the next step.
+
+---
+
 ## Prioritization Matrix
 
-Use this table to recommend strategies based on the user's situation:
+Use this table to recommend strategies based on the user's stage and situation. Apply the Stage Gate first:
 
-| Strategy | Effort | Cost | Time to Impact | Best When... |
-|---|---|---|---|---|
-| 1. MCP Servers | Medium | $0 | 1-4 weeks | Product answers a specific question; SaaS/data/API |
-| 2. Programmatic SEO | High | $0-500 | 2-3 months | Any business; keyword patterns exist in niche |
-| 3. Free Tool | Medium | $0 | 1-2 weeks | Product has measurable inputs; SaaS/agency |
-| 4. AEO | Medium | $0 | 1-3 months | Knowledge-heavy niche; authority domain |
-| 5. Viral Artifacts | Medium | $0 | 2-4 weeks | Product has user milestones or shareable outputs |
-| 6. Newsletter Acquisition | Low | $5-20K | Immediate | Budget available; clear niche; high LTV |
-| 7. Content Repurposing | Low | $0 | 1 week | Founder can speak on topic; any business |
-| 8. Parallel IG Reels Engine | Very High | $0-50/mo | 5-6 months (discovery acct) / 2-4 weeks (launch acct) | Consumer mobile app with visual/competitive/gamified mechanics; team can commit one operator to 10-15 hrs/week for 6+ months; comfortable with meme-remix IP grey area |
-| 9. First Users (Pre-PMF) | Low | $0 | A few weeks | No users stay without the founder pushing; one customer type reachable through a trusted group |
-| 10. AI Directory Listing | Medium | $0 | Unknown | Single-task tool an assistant can invoke; can accept platform dependence |
+| Strategy | Stage | Effort | Cost | Time to Impact | Best When... |
+|---|---|---|---|---|---|
+| 1. MCP Servers | Early traction+ (usually premature before) | Medium | $0 | 1-4 weeks | Product answers a specific question; SaaS/data/API |
+| 2. Programmatic SEO | Early traction+ (usually premature before) | High | $0-500 | 2-3 months | Any business; keyword patterns exist in niche |
+| 3. Free Tool | Any (cheap) | Medium | $0 | 1-2 weeks | Product has measurable inputs; SaaS/agency |
+| 4. AEO | Any (slow payoff) | Medium | $0 | 1-3 months | Knowledge-heavy niche; authority domain |
+| 5. Viral Artifacts | Any (cheap) | Medium | $0 | 2-4 weeks | Product has user milestones or shareable outputs |
+| 6. Newsletter Acquisition | Early traction+ (usually premature before) | Low | $5-20K | Immediate | Budget available; clear niche; high LTV |
+| 7. Content Repurposing | Any (cheap) | Low | $0 | 1 week | Founder can speak on topic; any business |
+| 8. Parallel IG Reels Engine | Early traction+ (usually premature before) | Very High | $0-50/mo | 5-6 months (discovery acct) / 2-4 weeks (launch acct) | Consumer mobile app with visual/competitive/gamified mechanics; team can commit one operator to 10-15 hrs/week for 6+ months; comfortable with meme-remix IP grey area |
+| 9. First Users (Pre-PMF) | Pre-PMF (default) | Low | $0 | A few weeks | No users stay without the founder pushing; one customer type reachable through a trusted group |
+| 10. AI Directory Listing | Early traction+ (experimental; not a Pre-PMF default) | Medium | $0 | Unknown | Single-task tool an assistant can invoke; can accept platform dependence |
 
 ### Recommended starting combinations:
+
+The combinations below assume Early traction or Scale unless they say otherwise. Pre-PMF products start from the Pre-PMF combination.
 
 - **$0 budget, technical founder:** Strategies 1 (MCP) + 3 (Free Tool) + 7 (Repurposing)
 - **$0 budget, non-technical founder:** Strategies 4 (AEO) + 7 (Repurposing) + 3 (Free Tool)
 - **$5-20K budget:** Strategy 6 (Newsletter) + 2 (Programmatic SEO) + 7 (Repurposing)
 - **Established product, needs growth:** Strategies 5 (Viral Artifacts) + 2 (Programmatic SEO) + 4 (AEO)
-- **New product, no audience:** Strategies 7 (Repurposing) + 6 (Newsletter) + 3 (Free Tool)
+- **New product with some retained users, no audience:** Strategies 7 (Repurposing) + 6 (Newsletter) + 3 (Free Tool)
 - **Pre-PMF, no retained users:** Strategy 9 (First Users) + at most one of 3 (Free Tool), 5 (Viral Artifacts) or 7 (Repurposing)
-- **Single-task tool, can accept platform dependence:** Strategy 10 (AI Directory Listing) + 3 (Free Tool) + 4 (AEO)
+- **Single-task tool, can accept platform dependence (Early traction or later):** Strategy 10 (AI Directory Listing) + 3 (Free Tool) + 4 (AEO)
 - **Consumer mobile app (with 6+ month commitment to content grind):** Strategy 8 (Parallel IG Reels Engine) + 5 (Viral Artifacts) + 7 (Repurposing)
 
 ---
