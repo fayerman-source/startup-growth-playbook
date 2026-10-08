@@ -152,4 +152,4 @@ Do not mark anything as published, submitted, indexed, deployed, or verified unl
 - If remaining work requires app-code changes, deployment access, or external systems, stop generating new collateral and produce a handoff instead
 - Prefer quality over breadth: ship a few strong artifacts rather than many weak ones
 - Do not modify any files outside the `marketing/` directory unless the user explicitly asks for implementation outside it
-- Never commit personal data about real people: names, emails, contact details or per-person activity. Commit empty templates and aggregate numbers only, and keep filled-in logs outside version control. This matters most when the host repo is public
+- Never commit private data about customers, users or prospects: their names, emails, contact details or per-person activity. Commit empty templates and aggregate numbers only, and keep filled-in logs outside version control. This matters most when the host repo is public. Public figures cited as sources, and public business contacts researched for outreach (for example a newsletter's listed owner), are not covered by this rule

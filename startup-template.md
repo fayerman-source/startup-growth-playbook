@@ -21,6 +21,8 @@ Based on the prioritization matrix in `playbook.md`, the recommended strategies 
 2. **Strategy:** _[name]_ — **Why:** _[reason it fits this startup]_
 3. **Strategy:** _[name]_ — **Why:** _[reason it fits this startup]_
 
+List as many strategies as the stage supports: one, two or three. Delete the unused rows here, and the matching checklist and metric rows below, instead of inventing a strategy or leaving a placeholder.
+
 If the stage gate in `AGENT.md` finds that no strategy fits yet, replace the list above with a single line:
 
 **Outcome:** Not yet: recommended next step is _[X]_. **Why:** _[reason]_
