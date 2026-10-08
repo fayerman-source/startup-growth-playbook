@@ -50,7 +50,7 @@ Before selecting strategies, decide which stage the product is in. Scale tactics
 
 How to infer it from the repo and docs: look for user or retention numbers, analytics notes, a changelog, a waitlist or invite-only language, "beta" or "alpha" labels, a billing or paid-plan implementation with real customers, testimonials, support logs, and any founder notes on who uses the product and how they were found. Onboarding scripts or hand-written welcome messages usually mean the founder is still doing the pushing. A pricing page or a live checkout alone does not prove retained users.
 
-If the evidence is unclear, ask the user one direct question: "Do any users come back week after week without you messaging them?" If you cannot ask, assume the earlier stage, and record the stage and your reasoning in `plan.md`.
+If the evidence is unclear, ask the user one direct question: "Do any users come back on their own, as often as the product is normally used (daily, weekly, monthly, or each time the need comes up), without you messaging them?" If you cannot ask, assume the earlier stage, and record the stage and your reasoning in `plan.md`.
 
 What the stage changes:
 
@@ -152,3 +152,4 @@ Do not mark anything as published, submitted, indexed, deployed, or verified unl
 - If remaining work requires app-code changes, deployment access, or external systems, stop generating new collateral and produce a handoff instead
 - Prefer quality over breadth: ship a few strong artifacts rather than many weak ones
 - Do not modify any files outside the `marketing/` directory unless the user explicitly asks for implementation outside it
+- Never commit personal data about real people: names, emails, contact details or per-person activity. Commit empty templates and aggregate numbers only, and keep filled-in logs outside version control. This matters most when the host repo is public

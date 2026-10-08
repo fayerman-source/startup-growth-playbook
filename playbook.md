@@ -609,12 +609,12 @@ Before product-market fit, the question to answer is whether a specific group of
 - [ ] Hold the first 3 conversations and write notes in the customer's own words
 - [ ] Ask the organiser of one group for permission before posting anything there
 - [ ] Define "activated" for your product in one sentence (the first thing that shows a user got value)
-- [ ] Start a simple log: person, date onboarded, activated yes/no, last active date, founder minutes spent
+- [ ] Start a simple log: a pseudonymous ID per person (not a name or email), date onboarded, activated yes/no, last active date, founder minutes spent. Keep it outside version control (a private spreadsheet or a git-ignored file)
 
 ### Success Metrics
 
 - Activation: share of onboarded users who reach the activation event you defined
-- Retention at week 4 without founder prompting: share of users still active after the nudges stopped
+- Retention without founder prompting: share of users still active after the nudges stopped, measured at the product's normal usage interval (for a weekly product, week 4)
 - Founder time per active user: total founder hours spent divided by users who are still active
 - Number of interviews completed and number of introductions received (inputs, not goals)
 
@@ -628,7 +628,7 @@ When executing this strategy, you should:
 - Draft the interview script and a note-taking template that records what people did, not what they said they would do
 - Draft the permission request to a group organiser, and a short invitation message that sounds like the founder
 - Write the onboarding checklist the founder follows by hand, plus the activation definition
-- Create the user log and the weekly metrics sheet (activation, week-4 retention, founder time per active user)
+- Create an empty user-log template with pseudonymous IDs and the metrics sheet (activation, retention without prompting, founder time per active user). Commit only the empty template and aggregate numbers; the filled-in log holds real people's activity and stays out of the repo, especially a public one
 - Draft the one-line introduction request for happy users
 - Do not post in any community, send messages or contact anyone. Prepare drafts for the founder to send.
 
@@ -700,7 +700,7 @@ When executing this strategy, you should:
 
 ## Stage Gate
 
-Classify the stage before choosing strategies. Infer it from the repo and docs (retention or user numbers, analytics notes, waitlist or beta language, real paying customers); if it is unclear, ask the user whether any users come back week after week without the founder messaging them.
+Classify the stage before choosing strategies. Infer it from the repo and docs (retention or user numbers, analytics notes, waitlist or beta language, real paying customers); if it is unclear, ask the user whether any users come back on their own, as often as the product is normally used, without the founder messaging them.
 
 | Stage | Definition | What to do |
 |---|---|---|
