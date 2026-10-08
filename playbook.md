@@ -1,8 +1,10 @@
 # Distribution-First Marketing Playbook
 
 > **Sources:**
-> - Strategies 1–7 — Greg Isenberg, *7 Growth Strategies for Vibe Coders* (Startup Ideas Podcast)
+> - Strategies 1–7 — Greg Isenberg, X post and Startup Ideas Podcast episode of 2026-03-30, "Stop Vibe Coding. Start Getting Customers." ([X post](https://x.com/gregisenberg/status/2038706332119797894))
 > - Strategy 8 — Caleb Dean, *Runify Acquisition Playbook* ([Superwall Podcast with Joseph Choy](https://www.youtube.com/watch?v=yw5iIgO4PbY))
+> - Strategy 9 — Greg Isenberg's audience/community-first framing and "test one customer type first", from the Startup Ideas Podcast episode "Muse AI Connectors: The Next App Store Moment?" (2026-09-24, [Apple Podcasts](https://podcasts.apple.com/us/podcast/muse-ai-connectors-the-next-app-store-moment/id1593424985?i=1000791511740)). The remaining steps are general founder-led customer-development practice, not attributed to him.
+> - Strategy 10 — Greg Isenberg, X thread of 2026-10-01 ([post](https://x.com/gregisenberg/status/2105454208040206773)) and X thread of 2026-09-18 on Meta Muse connectors ([post](https://x.com/gregisenberg/status/2101097826730017111))
 >
 > **Core thesis:** Code is commoditized. Distribution is the new moat. Build the audience first, then build the product.
 
@@ -826,4 +828,4 @@ Most pages include `og:image` but skip `og:image:alt`. It's a cheap accessibilit
 
 ---
 
-*Playbook derived from Greg Isenberg's Startup Ideas Podcast — "7 Growth Strategies for Vibe Coders" (YouTube: YeoGehNsrLc)*
+*Strategies 1–7 derived from Greg Isenberg's X post and Startup Ideas Podcast episode of 2026-03-30, "Stop Vibe Coding. Start Getting Customers." See the Sources list at the top for Strategies 8–10.*
