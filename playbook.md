@@ -1,8 +1,10 @@
 # Distribution-First Marketing Playbook
 
 > **Sources:**
-> - Strategies 1–7 — Greg Isenberg, *7 Growth Strategies for Vibe Coders* (Startup Ideas Podcast)
-> - Strategy 8 — Caleb Dean, *Runify Acquisition Playbook* ([Superwall Podcast with Joseph Choy](https://www.youtube.com/watch?v=yw5iIgO4PbY))
+> - Strategies 1–7: Greg Isenberg, X post and Startup Ideas Podcast episode of 2026-03-30, "Stop Vibe Coding. Start Getting Customers." ([X post](https://x.com/gregisenberg/status/2038706332119797894))
+> - Strategy 8: Caleb Dean, *Runify Acquisition Playbook* ([Superwall Podcast with Joseph Choy](https://www.youtube.com/watch?v=yw5iIgO4PbY))
+> - Strategy 9: the step "talk to one type of customer about the last time they dealt with the task", from the notes to Greg Isenberg's Startup Ideas Podcast episode "Muse AI Connectors: The Next App Store Moment?" (2026-09-24, [Apple Podcasts](https://podcasts.apple.com/us/podcast/muse-ai-connectors-the-next-app-store-moment/id1593424985?i=1000791511740)). The remaining steps are general founder-led customer-development practice, not attributed to him.
+> - Strategy 10: Greg Isenberg, X thread of 2026-10-01 ([post](https://x.com/gregisenberg/status/2105454208040206773)) and X thread of 2026-09-18 on Meta Muse connectors ([post](https://x.com/gregisenberg/status/2101097826730017111))
 >
 > **Core thesis:** Code is commoditized. Distribution is the new moat. Build the audience first, then build the product.
 
@@ -10,7 +12,7 @@
 
 ## Agent Instructions
 
-You are a marketing strategist and executor. This playbook contains 8 distribution strategies. Your job is to help the user select, prioritize, and execute these strategies for their specific product.
+You are a marketing strategist and executor. This playbook contains 10 distribution strategies. Your job is to help the user select, prioritize, and execute these strategies for their specific product.
 
 ### Before you begin, discover these inputs from the codebase and ask the user only for anything you cannot infer:
 
@@ -21,11 +23,12 @@ You are a marketing strategist and executor. This playbook contains 8 distributi
 | `{{AUDIENCE}}` | Who the ideal customer is |
 | `{{BUDGET}}` | Monthly marketing budget (including potential acquisitions) |
 | `{{CURRENT_CHANNELS}}` | Existing distribution (social followers, email list, SEO authority, etc.) |
+| `{{STAGE}}` | Pre-PMF (no users retained without the founder pushing), Early traction (some retained users, acquisition not yet repeatable) or Scale (repeatable acquisition and retention signal) |
 
 ### How to use this playbook:
 
 1. Discover the variables above from the codebase first, then ask the user only for anything still missing
-2. Consult the **Prioritization Matrix** (Section 9) to recommend 2-3 strategies based on the user's situation
+2. Classify the **stage** (see the Stage Gate below), then consult the **Prioritization Matrix** to recommend the strategies that fit: usually 2-3, fewer before product-market fit, or "Not yet" if nothing fits
 3. For each selected strategy, walk through the **Implementation Steps** and **This Week Checklist**
 4. Execute the **Agent Tasks** that can be completed inside `marketing/` — these are things you can do directly (draft content, generate ideas, write copy, build templates)
 5. If the next highest-value work requires product code changes, deployment access, analytics checks, or other external systems, stop generating more collateral and produce an implementation handoff instead
@@ -65,7 +68,7 @@ The long-term thesis — that AI clients become a meaningful distribution surfac
 
 1. Identify what question your product answers (e.g., "What's the best CRM for dentists?" → your product is the answer)
 2. Build an MCP server that returns that data — this can be vibe-coded in 24 hours or less
-3. Publish to MCP registries: Smithery, MCPT, Open Tools
+3. Publish to MCP registries: Smithery, MCPT, Open Tools. The named registries change fast (they may rename, merge or close), so verify which are active before using them. This list is as of 2026-10-08 and was not independently verified.
 4. Monitor installations and usage
 5. Iterate on the data quality and response format based on how AI assistants use it
 
@@ -105,7 +108,9 @@ When executing this strategy, you should:
 
 ### Why it works
 
-You create thousands of keyword-targeted pages using a repeatable pattern (e.g., "Best [product type] for [niche]" or "[service] in [city]"). Each page gets modest traffic (even 30 visits/month), but at 10,000 pages that's 300,000 monthly visitors. At 2% conversion and $10 each, that's $60,000/month from pages you built once.
+You create thousands of keyword-targeted pages using a repeatable pattern (e.g., "Best [product type] for [niche]" or "[service] in [city]"). Each page gets modest traffic (even 30 visits/month), but at 10,000 pages that's 300,000 monthly visitors. At 2% conversion and $10 each, that's $60,000/month from pages you built once. Treat this arithmetic as an illustration of how the math compounds, not a benchmark. The 30 visits per page, the 2% conversion and the $10 value are assumptions, and most page sets will not reach them.
+
+> **Reality check:** Google's spam policies prohibit "scaled content abuse": producing many pages mainly to rank in search rather than to help people, whatever the production method (AI, humans or a mix). Thousands of near-identical pages built from a template and a keyword list can fall under it, and the penalty can hit the whole site, not just those pages. Each page needs information a visitor can actually use, such as real data, a real answer or something specific to that city or product. Read the current policy before scaling: [Google spam policies](https://developers.google.com/search/docs/essentials/spam-policies#scaled-content). Start with the 100-page test and see whether the pages get indexed and shown before going further.
 
 ### Implementation Steps
 
@@ -161,9 +166,9 @@ A free tool (grader, analyzer, calculator, checker) gives the user instant value
 
 1. Identify what your user wants to measure, score, or analyze about themselves or their business
 2. Build a free tool that gives them a score/result (e.g., "Your site scores 43/100")
-3. Gate the full results behind an email capture
+3. Optional: gate the full results behind an email capture. Skip this if the product is free or has no paid tier to lead to; an ungated result is often a better first experience
 4. Make the result shareable (social proof + backlinks)
-5. Add a clear upsell: "Want to fix these issues? Here's our paid product."
+5. Optional: add a clear upsell ("Want to fix these issues? Here's our paid product."). Only if there is a paid product; otherwise point to the next useful step in the product
 6. Promote the tool across your channels
 7. Build one free tool per month — create a "free tool calendar"
 
@@ -172,7 +177,7 @@ A free tool (grader, analyzer, calculator, checker) gives the user instant value
 - [ ] Brainstorm 10 free tool ideas for `{{PRODUCT}}`
 - [ ] Pick the one with highest viral potential (users want to share their score)
 - [ ] Build the MVP — input form, processing, result page
-- [ ] Add email capture gate
+- [ ] Add email capture gate (optional; N/A for free products or products without a paid tier)
 - [ ] Add share button with pre-filled social post
 - [ ] Ship it and announce on your existing channels
 - [ ] Track signups and shares
@@ -191,9 +196,9 @@ When executing this strategy, you should:
 
 - Generate 10 free tool concepts for `{{PRODUCT}}` targeting `{{AUDIENCE}}`
 - For the top concept, draft the user flow (input → processing → result → share → upsell)
-- Write the copy for the result page including the upsell CTA
+- Write the copy for the result page, including the upsell CTA if the product has a paid tier
 - Draft social post templates users can share with their results
-- Write the email capture copy and follow-up sequence (3 emails)
+- If an email gate is used, write the email capture copy and follow-up sequence (3 emails)
 
 ---
 
@@ -217,6 +222,7 @@ The core tactic — write clear, structured, direct answers to real questions �
 
 ### Implementation Steps
 
+0. Before writing anything, check whether the site already has FAQ content or FAQ/HowTo schema (search the codebase for `FAQPage`, `application/ld+json` and existing FAQ pages). Extend or fix what exists instead of duplicating it. Verify any statement about how the product itself behaves (features, limits, pricing, supported platforms) against the code or the live product, not against the README or your assumptions.
 1. Google the top 20 questions your customer asks
 2. Write the definitive, structured answer for each — clear, direct, citation-worthy (not 3,000-word fluff)
 3. Use FAQ format with proper schema markup
@@ -306,11 +312,11 @@ When executing this strategy, you should:
 
 **Priority:** Medium-High (if budget allows)
 **Time to first result:** Immediate (day 1 after acquisition)
-**Best for:** Any business with a clear niche and $5-20K budget
+**Best for:** Any business with a clear niche and a budget in the range of $5-20K (indicative and unsourced; real prices vary widely)
 
 ### Why it works
 
-Building an audience takes years of daily content with no guarantee. Instead, buy a 5,000-50,000 subscriber newsletter for $5,000-$20,000. You own a direct channel that can't be suppressed by algorithm changes, and you skip the cold-start problem. Many small newsletter owners make $0-500/month and would be thrilled by a fair acquisition offer.
+Building an audience takes years of daily content with no guarantee. Instead, buy a 5,000-50,000 subscriber newsletter. The $5,000-$20,000 price range here is indicative and unsourced; get real quotes and do not treat it as a market rate. You own a direct channel that can't be suppressed by algorithm changes, and you skip the cold-start problem. Many small newsletter owners make $0-500/month and would be thrilled by a fair acquisition offer.
 
 > **Reality check:** "Inherit trust from day one" is the pitch, not always the reality. Newsletter audiences follow the *person*, not the publication. Post-acquisition open rates typically drop 20–40% in the first 3 months, and subscriber churn accelerates if the voice changes noticeably. This doesn't kill the strategy — the economics can still work — but you should model the ROI with a realistic open rate decline baked in, not with pre-acquisition numbers. A soft handoff (the original owner writing one final edition introducing you) and maintaining the original voice for the first 60 days both help. The market of owners willing to sell at fair prices is also smaller than it appears; most who respond are either too expensive or have inflated subscriber counts.
 
@@ -320,7 +326,7 @@ Building an audience takes years of daily content with no guarantee. Instead, bu
 2. Filter for 5,000-50,000 subscribers in your target niche
 3. DM the owner: "Have you ever thought about selling?"
 4. Evaluate: open rates, subscriber quality, engagement, growth trend
-5. Make a fair offer ($5K-$20K depending on size and quality)
+5. Make a fair offer (the $5K-$20K range is indicative and unsourced; price from the numbers you verify)
 6. Transition ownership, maintain the voice and cadence initially
 7. Gradually introduce your product to the audience
 8. Repeat across niches if LTV justifies it
@@ -573,38 +579,179 @@ When executing this strategy, you should:
 
 ---
 
+## Strategy 9: First Users (Pre-PMF)
+
+**Priority:** High (before product-market fit; low once acquisition is repeatable)
+**Time to first result:** A few weeks (retention takes time to show)
+**Best for:** Any product with no users who stay without the founder pushing: new products, new audiences, products that just pivoted
+**Skip if:** You already have users who return on their own and acquisition is the open question. Use the other strategies instead.
+
+### Why it works
+
+Before product-market fit, the question to answer is whether a specific group of people has the problem badly enough to keep using what you built. Scale tactics (thousands of pages, bought audiences, content engines) can put traffic in front of a product nobody keeps, which tells you nothing. Going small and personal gives you the one signal that matters at this stage: who stays when you stop pushing.
+
+> **Reality check:** One step comes from a named source: talk to one type of customer about the last time they dealt with the problem, from the notes to Greg Isenberg's Startup Ideas Podcast episode of 2026-09-24 (see Sources). The rest (recruiting through a group that trusts you, onboarding by hand, stopping the nudges, asking for one introduction) is general founder-led customer-development practice, not his. None of it is a guarantee: five to ten conversations and a handful of users can mislead you, and a flat result is a valid answer. It may mean the customer type, the problem or the product is wrong.
+
+### Implementation Steps
+
+1. Pick ONE customer type. Be specific enough that you could list where they gather. If you serve several types, choose the one you can reach most easily and test the others later.
+2. Talk to 5–10 people who have the problem. Ask about the last time it happened: what they did, what it cost them, what they tried. Do not pitch. Do not ask whether they would use your product.
+3. Recruit through one group that already trusts you (a community you belong to, a customer list, a club, a cohort). Ask the organiser first and follow the group's rules. Never drop links into communities you are not part of.
+4. Onboard each person by hand: a call, a message thread or a shared screen. Watch where they get stuck and write it down.
+5. After a few weeks, stop your personal nudges: no check-in messages or calls from you. Keep the product's normal automated reminders running if they are part of how it works. See who comes back on their own.
+6. Ask the users who are happy and still active for one introduction each, to someone else of the same customer type.
+
+### This Week Checklist
+
+- [ ] Write down the one customer type you will test first, and where they gather
+- [ ] List 10 people of that type you can reach through someone who already trusts you
+- [ ] Draft a short interview script built around "the last time this happened"
+- [ ] Hold the first 3 conversations and write notes in the customer's own words
+- [ ] Ask the organiser of one group for permission before posting anything there
+- [ ] Define "activated" for your product in one sentence (the first thing that shows a user got value)
+- [ ] Start a simple log: a pseudonymous ID per person (not a name or email), date onboarded, activated yes/no, last active date, founder minutes spent. Keep it outside version control (a private spreadsheet or a git-ignored file)
+
+### Success Metrics
+
+- Activation: share of onboarded users who reach the activation event you defined
+- Retention without founder prompting: share of users still active after the nudges stopped, measured at the product's normal usage interval (for a weekly product, week 4)
+- Founder time per active user: total founder hours spent divided by users who are still active
+- Number of interviews completed and number of introductions received (inputs, not goals)
+
+No benchmark is given for these. Compare against your own previous cohort, not a published number.
+
+### Agent Tasks
+
+When executing this strategy, you should:
+
+- Propose up to 3 candidate customer types from the repo and docs, with the reasoning, and ask the user to pick one
+- Draft the interview script and a note-taking template that records what people did, not what they said they would do
+- Draft the permission request to a group organiser, and a short invitation message that sounds like the founder
+- Write the onboarding checklist the founder follows by hand, plus the activation definition
+- Create an empty user-log template with pseudonymous IDs and the metrics sheet (activation, retention without prompting, founder time per active user). Commit only the empty template and aggregate numbers; the filled-in log holds real people's activity and stays out of the repo, especially a public one
+- Draft the one-line introduction request for happy users
+- Do not post in any community, send messages or contact anyone. Prepare drafts for the founder to send.
+
+---
+
+## Strategy 10: Get Listed in a New AI Platform's Directory Early
+
+**Priority:** Experimental (recent and unproven)
+**Time to first result:** Unknown; depends on the platform's review process
+**Best for:** Single-task utilities and tools an AI assistant can invoke, where the user's need is a repeated task they currently search for or do by hand each week
+**Skip if:** The product is deep and multi-screen. You need an owned relationship with the user (email, accounts, community) as the core of the business. You cannot accept dependence on one platform's rules and ranking.
+
+### Why it works
+
+When a new AI platform opens a directory of plugins, apps or connectors, early entrants face little competition, and the assistant can suggest a listed tool in the middle of a conversation. Greg Isenberg's argument, in an X thread of 2026-10-01 about ChatGPT, is that this is an early-platform window, like the first years of a new app store, and that being there early matters. In a separate thread of 2026-09-18 about Meta Muse connectors, he calls connectors the new app listings and warns that whoever you connect to becomes your new landlord, so pick carefully.
+
+This is different from Strategy 1 and Strategy 4:
+
+- Strategy 1 publishes an MCP server as a general integration that users install in their AI client.
+- Strategy 4 gets your web content cited when an assistant answers a question.
+- This strategy builds a purpose-made tool for one platform's directory, so the assistant suggests it in a conversation. The listing itself is the distribution.
+
+> **Reality check:**
+>
+> - **Recent and unproven.** The source threads are weeks old. No durable results for this approach have been shown. Treat it as an experiment.
+> - **Platform and landlord risk.** The platform decides what is ranked, can charge for placement, and can copy winning tools. You rent your distribution.
+> - **Verify before building.** Check the platform's current program, review process, policies and terms. Names, requirements and eligibility change fast and may differ from the threads.
+> - **Unverified claims.** Isenberg's user-count and traction claims are his own and are not independently verified here. Do not plan around them.
+
+### Implementation Steps
+
+1. Find a task people repeatedly search for or do by hand every week, one a small tool could do end to end.
+2. Build it as a plugin or app for the platform (the thread describes ChatGPT). Keep it narrow: one task, done well.
+3. Write the listing description in the exact phrases people type into the assistant, not marketing language. Collect those phrases from search suggestions, forums and customer conversations.
+4. Launch about five small tools for different tasks and see which one the assistant actually picks and users keep.
+5. Double down on the winner and drop or pause the rest.
+6. Give users a way to reach you outside the platform (an email prompt, a link to your own site) so the relationship is not owned only by the platform.
+
+### This Week Checklist
+
+- [ ] Read the platform's current directory program, review process and terms and write down anything that limits you
+- [ ] List 10 tasks `{{AUDIENCE}}` repeats weekly that could be done by one small tool
+- [ ] Collect the exact phrases people use to ask for each task
+- [ ] Pick one task and write the listing description using those phrases
+- [ ] Build the narrowest version that completes the task
+- [ ] Submit it, and record the review outcome and timing
+- [ ] Decide in advance what usage would count as a winner
+
+### Success Metrics
+
+- Listing approved (yes/no) and time to approval
+- Times the assistant suggests or invokes the tool (if the platform reports it)
+- Completed tasks per week, and repeat use
+- Users who move to a channel you own (email, account, site)
+- Share of total acquisition that depends on this one platform
+
+### Agent Tasks
+
+When executing this strategy, you should:
+
+- Check the platform's current documentation and terms, and report what you could not verify
+- Generate 10 candidate tasks for `{{AUDIENCE}}` and the phrases people use to ask for them
+- Draft the listing description and a short test-prompt list to check whether the assistant surfaces the tool
+- Draft any privacy notes the listing needs, after checking the platform's terms
+- Draft the "reach me outside the platform" prompt shown after a completed task
+- Flag platform dependence in `plan.md` Notes
+
+---
+
+## Stage Gate
+
+Classify the stage before choosing strategies. Infer it from the repo and docs (retention or user numbers, analytics notes, waitlist or beta language, real paying customers); if it is unclear, ask the user whether any users come back on their own, as often as the product is normally used, without the founder messaging them.
+
+| Stage | Definition | What to do |
+|---|---|---|
+| **Pre-PMF** | No users retained without the founder pushing | Default to Strategy 9 (First Users) plus at most one cheap strategy (3, 5 or 7), or Strategy 10 if the product is a single-task tool |
+| **Early traction** | Some retained users, acquisition not yet repeatable | Use the matrix as written |
+| **Scale** | A repeatable acquisition and retention signal | Use the matrix as written |
+
+Strategies 1, 2, 6 and 8 are usually premature before early traction: they spend effort or money on reach for a product whose retention is not yet shown. Select one of them while Pre-PMF only when the user gives a specific reason, and write the reason down.
+
+"Not yet" is a valid result. If the stage is Pre-PMF and even Strategy 9 cannot start (for example, there is no product anyone can try), say that and name the next step.
+
+---
+
 ## Prioritization Matrix
 
-Use this table to recommend strategies based on the user's situation:
+Use this table to recommend strategies based on the user's stage and situation. Apply the Stage Gate first:
 
-| Strategy | Effort | Cost | Time to Impact | Best When... |
-|---|---|---|---|---|
-| 1. MCP Servers | Medium | $0 | 1-4 weeks | Product answers a specific question; SaaS/data/API |
-| 2. Programmatic SEO | High | $0-500 | 2-3 months | Any business; keyword patterns exist in niche |
-| 3. Free Tool | Medium | $0 | 1-2 weeks | Product has measurable inputs; SaaS/agency |
-| 4. AEO | Medium | $0 | 1-3 months | Knowledge-heavy niche; authority domain |
-| 5. Viral Artifacts | Medium | $0 | 2-4 weeks | Product has user milestones or shareable outputs |
-| 6. Newsletter Acquisition | Low | $5-20K | Immediate | Budget available; clear niche; high LTV |
-| 7. Content Repurposing | Low | $0 | 1 week | Founder can speak on topic; any business |
-| 8. Parallel IG Reels Engine | Very High | $0-50/mo | 5-6 months (discovery acct) / 2-4 weeks (launch acct) | Consumer mobile app with visual/competitive/gamified mechanics; team can commit one operator to 10-15 hrs/week for 6+ months; comfortable with meme-remix IP grey area |
+| Strategy | Stage | Effort | Cost | Time to Impact | Best When... |
+|---|---|---|---|---|---|
+| 1. MCP Servers | Early traction+ (usually premature before) | Medium | $0 | 1-4 weeks | Product answers a specific question; SaaS/data/API |
+| 2. Programmatic SEO | Early traction+ (usually premature before) | High | $0-500 | 2-3 months | Any business; keyword patterns exist in niche |
+| 3. Free Tool | Any (cheap) | Medium | $0 | 1-2 weeks | Product has measurable inputs; SaaS/agency |
+| 4. AEO | Any (slow payoff) | Medium | $0 | 1-3 months | Knowledge-heavy niche; authority domain |
+| 5. Viral Artifacts | Any (cheap) | Medium | $0 | 2-4 weeks | Product has user milestones or shareable outputs |
+| 6. Newsletter Acquisition | Early traction+ (usually premature before) | Low | $5-20K | Immediate | Budget available; clear niche; high LTV |
+| 7. Content Repurposing | Any (cheap) | Low | $0 | 1 week | Founder can speak on topic; any business |
+| 8. Parallel IG Reels Engine | Early traction+ (usually premature before) | Very High | $0-50/mo | 5-6 months (discovery acct) / 2-4 weeks (launch acct) | Consumer mobile app with visual/competitive/gamified mechanics; team can commit one operator to 10-15 hrs/week for 6+ months; comfortable with meme-remix IP grey area |
+| 9. First Users (Pre-PMF) | Pre-PMF (default) | Low | $0 | A few weeks | No users stay without the founder pushing; one customer type reachable through a trusted group |
+| 10. AI Directory Listing | Any (experimental; for single-task tools) | Medium | $0 | Unknown | Single-task tool an assistant can invoke; can accept platform dependence |
 
 ### Recommended starting combinations:
+
+The combinations below assume Early traction or Scale unless they say otherwise. Pre-PMF products start from the Pre-PMF combination.
 
 - **$0 budget, technical founder:** Strategies 1 (MCP) + 3 (Free Tool) + 7 (Repurposing)
 - **$0 budget, non-technical founder:** Strategies 4 (AEO) + 7 (Repurposing) + 3 (Free Tool)
 - **$5-20K budget:** Strategy 6 (Newsletter) + 2 (Programmatic SEO) + 7 (Repurposing)
 - **Established product, needs growth:** Strategies 5 (Viral Artifacts) + 2 (Programmatic SEO) + 4 (AEO)
-- **New product, no audience:** Strategies 7 (Repurposing) + 6 (Newsletter) + 3 (Free Tool)
+- **New product with some retained users, no audience:** Strategies 7 (Repurposing) + 6 (Newsletter) + 3 (Free Tool)
+- **Pre-PMF, no retained users:** Strategy 9 (First Users) + at most one of 3 (Free Tool), 5 (Viral Artifacts) or 7 (Repurposing). A single-task tool can use 10 (AI Directory Listing) as that one, since launching several small tools and keeping the one people pick is itself a test
+- **Single-task tool, can accept platform dependence:** Strategy 10 (AI Directory Listing) + 3 (Free Tool) + 4 (AEO)
 - **Consumer mobile app (with 6+ month commitment to content grind):** Strategy 8 (Parallel IG Reels Engine) + 5 (Viral Artifacts) + 7 (Repurposing)
 
 ---
 
 ## Weekly Execution Calendar (4-Week Sprint)
 
-This assumes the user has selected 2-3 strategies. Adapt based on their choices.
+This assumes 2-3 selected strategies. With one strategy (common before product-market fit), give its checklist the whole week and skip the slots for B and C.
 
 ### Week 1: Foundation
-- **Mon-Tue:** Collect `{{PRODUCT}}`, `{{NICHE}}`, `{{AUDIENCE}}` details. Select 2-3 strategies from the matrix.
+- **Mon-Tue:** Collect `{{PRODUCT}}`, `{{NICHE}}`, `{{AUDIENCE}}` details. Classify the stage, then select strategies from the matrix (see the Stage Gate for how many).
 - **Wed-Thu:** Execute "This Week Checklist" for Strategy A (primary)
 - **Fri:** Record first pillar content piece (if Strategy 7 selected). Begin Strategy B checklist.
 
@@ -642,7 +789,7 @@ These require manual review or structured-data tooling:
 
 **1. Structured data beyond FAQPage**
 
-FAQPage and BreadcrumbList are the baseline (covered in the AEO strategy). But editorial content pages should also carry Article schema with publisher and author. Tool/workspace pages that offer a free tier should carry WebApplication with an Offer block signaling the free access. Validate with Google's Rich Results Test after deploying.
+FAQPage and BreadcrumbList are the baseline (covered in the AEO strategy). But editorial content pages should also carry Article schema with publisher and author. Pages for a tool or app that offers a free tier can carry WebApplication with an Offer block signaling the free access. Validate with Google's Rich Results Test after deploying.
 
 **2. Semantic HTML landmarks**
 
@@ -654,7 +801,7 @@ Verify that every page intended for public discovery has `<meta name="robots" co
 
 **4. Footer navigation on content pages**
 
-Content pages (guides, idea lists, validation pages) often launch without footer links. Crawlers use footer links to discover site structure. Every content page should link back to the homepage, the workspace, and legal pages at minimum.
+Content pages (guides, comparison pages, FAQs, tool landing pages) often launch without footer links. Crawlers use footer links to discover site structure. Every content page should link back to the homepage, the main product or tool page, and legal pages at minimum.
 
 **5. `og:image:alt` on all pages**
 
@@ -662,7 +809,7 @@ Most pages include `og:image` but skip `og:image:alt`. It's a cheap accessibilit
 
 ### Agent Tasks
 
-- [ ] Run Lighthouse (mobile) on 1 page per type — landing, workspace, and each core content directory
+- [ ] Run Lighthouse (mobile) on 1 page per type: landing, the main product or tool page, and each core content directory
 - [ ] Fix all flagged issues before shipping content batches
 - [ ] Verify structured data with Rich Results Test on 1 page per type
 - [ ] Confirm `<main>` landmark present on all content pages
@@ -681,4 +828,4 @@ Most pages include `og:image` but skip `og:image:alt`. It's a cheap accessibilit
 
 ---
 
-*Playbook derived from Greg Isenberg's Startup Ideas Podcast — "7 Growth Strategies for Vibe Coders" (YouTube: YeoGehNsrLc)*
+*Strategies 1–7 derived from Greg Isenberg's X post and Startup Ideas Podcast episode of 2026-03-30, "Stop Vibe Coding. Start Getting Customers." See the Sources list at the top for Strategies 8–10.*
