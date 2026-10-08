@@ -1,10 +1,10 @@
 # Distribution-First Marketing Playbook
 
 > **Sources:**
-> - Strategies 1–7 — Greg Isenberg, X post and Startup Ideas Podcast episode of 2026-03-30, "Stop Vibe Coding. Start Getting Customers." ([X post](https://x.com/gregisenberg/status/2038706332119797894))
-> - Strategy 8 — Caleb Dean, *Runify Acquisition Playbook* ([Superwall Podcast with Joseph Choy](https://www.youtube.com/watch?v=yw5iIgO4PbY))
-> - Strategy 9 — Greg Isenberg's audience/community-first framing and "test one customer type first", from the Startup Ideas Podcast episode "Muse AI Connectors: The Next App Store Moment?" (2026-09-24, [Apple Podcasts](https://podcasts.apple.com/us/podcast/muse-ai-connectors-the-next-app-store-moment/id1593424985?i=1000791511740)). The remaining steps are general founder-led customer-development practice, not attributed to him.
-> - Strategy 10 — Greg Isenberg, X thread of 2026-10-01 ([post](https://x.com/gregisenberg/status/2105454208040206773)) and X thread of 2026-09-18 on Meta Muse connectors ([post](https://x.com/gregisenberg/status/2101097826730017111))
+> - Strategies 1–7: Greg Isenberg, X post and Startup Ideas Podcast episode of 2026-03-30, "Stop Vibe Coding. Start Getting Customers." ([X post](https://x.com/gregisenberg/status/2038706332119797894))
+> - Strategy 8: Caleb Dean, *Runify Acquisition Playbook* ([Superwall Podcast with Joseph Choy](https://www.youtube.com/watch?v=yw5iIgO4PbY))
+> - Strategy 9: the step "talk to one type of customer about the last time they dealt with the task", from the notes to Greg Isenberg's Startup Ideas Podcast episode "Muse AI Connectors: The Next App Store Moment?" (2026-09-24, [Apple Podcasts](https://podcasts.apple.com/us/podcast/muse-ai-connectors-the-next-app-store-moment/id1593424985?i=1000791511740)). The remaining steps are general founder-led customer-development practice, not attributed to him.
+> - Strategy 10: Greg Isenberg, X thread of 2026-10-01 ([post](https://x.com/gregisenberg/status/2105454208040206773)) and X thread of 2026-09-18 on Meta Muse connectors ([post](https://x.com/gregisenberg/status/2101097826730017111))
 >
 > **Core thesis:** Code is commoditized. Distribution is the new moat. Build the audience first, then build the product.
 
@@ -583,14 +583,14 @@ When executing this strategy, you should:
 
 **Priority:** High (before product-market fit; low once acquisition is repeatable)
 **Time to first result:** A few weeks (retention takes time to show)
-**Best for:** Any product with no users who stay without the founder pushing — new products, new audiences, products that just pivoted
+**Best for:** Any product with no users who stay without the founder pushing: new products, new audiences, products that just pivoted
 **Skip if:** You already have users who return on their own and acquisition is the open question. Use the other strategies instead.
 
 ### Why it works
 
-Before product-market fit, the problem is not reach. It is learning whether a specific group of people has the problem badly enough to keep using what you built. Scale tactics (thousands of pages, bought audiences, content engines) can put traffic in front of a product nobody keeps, which tells you nothing. Going small and personal gives you the one signal that matters at this stage: who stays when you stop pushing.
+Before product-market fit, the question to answer is whether a specific group of people has the problem badly enough to keep using what you built. Scale tactics (thousands of pages, bought audiences, content engines) can put traffic in front of a product nobody keeps, which tells you nothing. Going small and personal gives you the one signal that matters at this stage: who stays when you stop pushing.
 
-> **Reality check:** Only two parts of this strategy come from a named source: the audience/community-first framing and the advice to test one customer type first, both from Greg Isenberg's Startup Ideas Podcast episode of 2026-09-24 (see Sources). The rest (interviews about the last time the problem happened, onboarding by hand, stopping the nudges, asking for one introduction) is general founder-led customer-development practice, not Isenberg's. None of it is a guarantee: five to ten conversations and a handful of users can mislead you, and a flat result is a valid answer. It may mean the customer type, the problem or the product is wrong.
+> **Reality check:** One step comes from a named source: talk to one type of customer about the last time they dealt with the problem, from the notes to Greg Isenberg's Startup Ideas Podcast episode of 2026-09-24 (see Sources). The rest (recruiting through a group that trusts you, onboarding by hand, stopping the nudges, asking for one introduction) is general founder-led customer-development practice, not his. None of it is a guarantee: five to ten conversations and a handful of users can mislead you, and a flat result is a valid answer. It may mean the customer type, the problem or the product is wrong.
 
 ### Implementation Steps
 
@@ -643,7 +643,7 @@ When executing this strategy, you should:
 
 ### Why it works
 
-When a new AI platform opens a directory of plugins, apps or connectors, early entrants face little competition, and the assistant can suggest a listed tool in the middle of a conversation. Greg Isenberg's argument, in an X thread of 2026-10-01 about ChatGPT, is that this resembles the early App Store: listings are the new storefront, and being there early matters. In a separate thread of 2026-09-18 about Meta Muse connectors he makes a similar comparison for connectors and warns that whoever you connect to becomes your new landlord, so pick carefully.
+When a new AI platform opens a directory of plugins, apps or connectors, early entrants face little competition, and the assistant can suggest a listed tool in the middle of a conversation. Greg Isenberg's argument, in an X thread of 2026-10-01 about ChatGPT, is that this is an early-platform window, like the first years of a new app store, and that being there early matters. In a separate thread of 2026-09-18 about Meta Muse connectors, he calls connectors the new app listings and warns that whoever you connect to becomes your new landlord, so pick carefully.
 
 This is different from Strategy 1 and Strategy 4:
 
@@ -704,7 +704,7 @@ Classify the stage before choosing strategies. Infer it from the repo and docs (
 
 | Stage | Definition | What to do |
 |---|---|---|
-| **Pre-PMF** | No users retained without the founder pushing | Default to Strategy 9 (First Users) plus at most one cheap strategy (3, 5 or 7) |
+| **Pre-PMF** | No users retained without the founder pushing | Default to Strategy 9 (First Users) plus at most one cheap strategy (3, 5 or 7), or Strategy 10 if the product is a single-task tool |
 | **Early traction** | Some retained users, acquisition not yet repeatable | Use the matrix as written |
 | **Scale** | A repeatable acquisition and retention signal | Use the matrix as written |
 
@@ -729,7 +729,7 @@ Use this table to recommend strategies based on the user's stage and situation. 
 | 7. Content Repurposing | Any (cheap) | Low | $0 | 1 week | Founder can speak on topic; any business |
 | 8. Parallel IG Reels Engine | Early traction+ (usually premature before) | Very High | $0-50/mo | 5-6 months (discovery acct) / 2-4 weeks (launch acct) | Consumer mobile app with visual/competitive/gamified mechanics; team can commit one operator to 10-15 hrs/week for 6+ months; comfortable with meme-remix IP grey area |
 | 9. First Users (Pre-PMF) | Pre-PMF (default) | Low | $0 | A few weeks | No users stay without the founder pushing; one customer type reachable through a trusted group |
-| 10. AI Directory Listing | Early traction+ (experimental; not a Pre-PMF default) | Medium | $0 | Unknown | Single-task tool an assistant can invoke; can accept platform dependence |
+| 10. AI Directory Listing | Any (experimental; for single-task tools) | Medium | $0 | Unknown | Single-task tool an assistant can invoke; can accept platform dependence |
 
 ### Recommended starting combinations:
 
@@ -740,8 +740,8 @@ The combinations below assume Early traction or Scale unless they say otherwise.
 - **$5-20K budget:** Strategy 6 (Newsletter) + 2 (Programmatic SEO) + 7 (Repurposing)
 - **Established product, needs growth:** Strategies 5 (Viral Artifacts) + 2 (Programmatic SEO) + 4 (AEO)
 - **New product with some retained users, no audience:** Strategies 7 (Repurposing) + 6 (Newsletter) + 3 (Free Tool)
-- **Pre-PMF, no retained users:** Strategy 9 (First Users) + at most one of 3 (Free Tool), 5 (Viral Artifacts) or 7 (Repurposing)
-- **Single-task tool, can accept platform dependence (Early traction or later):** Strategy 10 (AI Directory Listing) + 3 (Free Tool) + 4 (AEO)
+- **Pre-PMF, no retained users:** Strategy 9 (First Users) + at most one of 3 (Free Tool), 5 (Viral Artifacts) or 7 (Repurposing). A single-task tool can use 10 (AI Directory Listing) as that one, since launching several small tools and keeping the one people pick is itself a test
+- **Single-task tool, can accept platform dependence:** Strategy 10 (AI Directory Listing) + 3 (Free Tool) + 4 (AEO)
 - **Consumer mobile app (with 6+ month commitment to content grind):** Strategy 8 (Parallel IG Reels Engine) + 5 (Viral Artifacts) + 7 (Repurposing)
 
 ---
@@ -809,7 +809,7 @@ Most pages include `og:image` but skip `og:image:alt`. It's a cheap accessibilit
 
 ### Agent Tasks
 
-- [ ] Run Lighthouse (mobile) on 1 page per type — landing, the main product or tool page, and each core content directory
+- [ ] Run Lighthouse (mobile) on 1 page per type: landing, the main product or tool page, and each core content directory
 - [ ] Fix all flagged issues before shipping content batches
 - [ ] Verify structured data with Rich Results Test on 1 page per type
 - [ ] Confirm `<main>` landmark present on all content pages

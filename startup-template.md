@@ -5,7 +5,7 @@
 | Field | Value |
 |---|---|
 | **Product** | {{PRODUCT}} |
-| **Stage** | {{STAGE}} (Pre-PMF, Early traction or Scale) — evidence: _[what in the repo or from the user shows this]_ |
+| **Stage** | {{STAGE}} (Pre-PMF, Early traction or Scale). Evidence: _[what in the repo or from the user shows this]_ |
 | **Niche** | {{NICHE}} |
 | **Target Audience** | {{AUDIENCE}} |
 | **Monthly Budget** | {{BUDGET}} |
@@ -23,13 +23,13 @@ Based on the prioritization matrix in `playbook.md`, the recommended strategies 
 
 If the stage gate in `AGENT.md` finds that no strategy fits yet, replace the list above with a single line:
 
-**Outcome:** Not yet — recommended next step is _[X]_. **Why:** _[reason]_
+**Outcome:** Not yet: recommended next step is _[X]_. **Why:** _[reason]_
 
 This is a valid outcome. Do not pad the plan with strategies the stage does not support.
 
 ## Execution Status
 
-Items that do not apply to this product or stage stay in the list and are marked `N/A — <reason>`, for example `- [ ] N/A — no paid tier, so no upsell step`. Do not delete them silently.
+Items that do not apply to this product or stage stay in the list and are marked `N/A: <reason>`, for example `- [ ] N/A: no paid tier, so no upsell step`. Do not delete them silently.
 
 ### Week 1
 - [ ] _[task from Strategy 1 checklist]_
@@ -71,7 +71,7 @@ Items that do not apply to this product or stage stay in the list and are marked
 | Retention (share of users still active without the founder prompting them) | | | | |
 | Founder time per active user | | | | |
 
-Use `N/A — <reason>` for a metric the product cannot yet produce, such as revenue for an unpaid product.
+Use `N/A: <reason>` for a metric the product cannot yet produce, such as revenue for an unpaid product.
 
 ## Outputs
 

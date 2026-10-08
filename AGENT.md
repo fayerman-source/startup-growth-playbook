@@ -54,7 +54,7 @@ If the evidence is unclear, ask the user one direct question: "Do any users come
 
 What the stage changes:
 
-- **Pre-PMF:** default to **Strategy 9 (First Users)** plus at most one cheap strategy from 3, 5 or 7. Strategies 1, 2, 6 and 8 are usually premature before early traction. Do not select them unless the user gives a specific reason, and record the reason in `plan.md` Notes.
+- **Pre-PMF:** default to **Strategy 9 (First Users)** plus at most one cheap strategy from 3, 5 or 7 (or Strategy 10 if the product is a single-task tool). Strategies 1, 2, 6 and 8 are usually premature before early traction. Do not select them unless the user gives a specific reason, and record the reason in `plan.md` Notes.
 - **Early traction and Scale:** use Step 2 as written below. Strategy 9 is optional.
 - If the honest answer is that no strategy fits yet, say so. "Not yet" with a recommended next step is a valid output (see `startup-template.md`).
 
@@ -86,8 +86,8 @@ Write `plan.md` in this directory using `startup-template.md` as the structure. 
 - Pull the **This Week Checklist** items from `playbook.md` into the execution status section
 - Pull the relevant **Success Metrics** into the metrics tracker
 - Tailor everything to this specific product — no placeholders, no generic language
-- Fill in the Stage row from Phase 2. Mark any checklist item that does not apply to this product or stage as `N/A — <reason>` instead of deleting it or forcing it
-- If the stage gate says nothing fits yet, write the outcome as `Not yet — recommended next step is <X>` in the plan instead of inventing strategies
+- Fill in the Stage row from Phase 2. Mark any checklist item that does not apply to this product or stage as `N/A: <reason>` instead of deleting it or forcing it
+- If the stage gate says nothing fits yet, write the outcome as `Not yet: recommended next step is <X>` in the plan instead of inventing strategies
 - Add activation and retention metrics next to the acquisition metrics, even for products that are not launched or not paid
 
 Commit `plan.md` when done, following the commit rules below.
@@ -144,7 +144,7 @@ Do not mark anything as published, submitted, indexed, deployed, or verified unl
 
 ## Rules
 
-- Never leave `{{VARIABLES}}` or placeholder text in outputs — everything must be specific to this product. The one exception is a field you could not determine, which you write as an explicit `Unknown: …` note
+- Never leave `{{VARIABLES}}` or placeholder text in outputs. Everything must be specific to this product. The one exception is a field you could not determine, which you write as an explicit `Unknown: …` note
 - Content must sound human — add specifics, examples, opinions. Flag anything that feels like slop.
 - If the codebase doesn't give you enough info to execute a task, note what's missing in `plan.md` under Notes and move on
 - Prefer phase-boundary commits over frequent partial commits
