@@ -787,7 +787,7 @@ These require manual review or structured-data tooling:
 
 **1. Structured data beyond FAQPage**
 
-FAQPage and BreadcrumbList are the baseline (covered in the AEO strategy). But editorial content pages should also carry Article schema with publisher and author. Tool/workspace pages that offer a free tier should carry WebApplication with an Offer block signaling the free access. Validate with Google's Rich Results Test after deploying.
+FAQPage and BreadcrumbList are the baseline (covered in the AEO strategy). But editorial content pages should also carry Article schema with publisher and author. Pages for a tool or app that offers a free tier can carry WebApplication with an Offer block signaling the free access. Validate with Google's Rich Results Test after deploying.
 
 **2. Semantic HTML landmarks**
 
@@ -799,7 +799,7 @@ Verify that every page intended for public discovery has `<meta name="robots" co
 
 **4. Footer navigation on content pages**
 
-Content pages (guides, idea lists, validation pages) often launch without footer links. Crawlers use footer links to discover site structure. Every content page should link back to the homepage, the workspace, and legal pages at minimum.
+Content pages (guides, comparison pages, FAQs, tool landing pages) often launch without footer links. Crawlers use footer links to discover site structure. Every content page should link back to the homepage, the main product or tool page, and legal pages at minimum.
 
 **5. `og:image:alt` on all pages**
 
@@ -807,7 +807,7 @@ Most pages include `og:image` but skip `og:image:alt`. It's a cheap accessibilit
 
 ### Agent Tasks
 
-- [ ] Run Lighthouse (mobile) on 1 page per type — landing, workspace, and each core content directory
+- [ ] Run Lighthouse (mobile) on 1 page per type — landing, the main product or tool page, and each core content directory
 - [ ] Fix all flagged issues before shipping content batches
 - [ ] Verify structured data with Rich Results Test on 1 page per type
 - [ ] Confirm `<main>` landmark present on all content pages
